@@ -1,0 +1,125 @@
+{% extends "page.twig" %}
+
+{% block content %}
+<section class="detail-banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-xl-7 col-12 px-0 me-n1">
+				<div class="lightbox-gallery">
+					<div class="photos">
+						{% for i in 1..4 %}
+							{% set image = attribute(res.attributes, 'img' ~ i) %}
+							{% if image.width > 0 %}
+							<div class="image-wrapper">
+								<a href="{{ image.value }}" data-lightbox="photos">
+									<figure class="mb-0 h-100">
+										<img class="img-fluid" src="{{ image.value }}">
+									</figure>
+									<div class="lightbox-overlay">
+										<img src="/assets/images/zoom-in-icon.svg" width="38" height="38">
+									</div>
+								</a>
+							</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-xl-5 col-12">
+				<div class="detail-summary">
+					<h2 class="product-title crimson-regular font-30">{{ res.attributes.name.value }}</h2>
+					<div class="rating d-flex pt-1 pb-4 border-bottom align-items-center">
+						<div class="stars">
+							{% for i in 1..5 %}
+								<span class="{% if i <= 3 %}checked{% endif %}"><img src="/assets/images/star-icon.svg"></span>
+							{% endfor %}
+						</div>
+						<a href="#" class="review-no ms-2 mt-1 font-12 text-dark">No reviews</a>
+					</div>
+					<div class="price-wrapper d-flex justify-content-between py-4">
+						<span class="product-price hind-bold">€{{ res.attributes.price.value|number_format(2) }}</span>
+						<span class="product-instock d-flex">
+							<img src="/assets/images/instock-icon.svg" class="me-2">
+							{{ res.attributes.stock_status.value|default('In stock') }}
+						</span>
+					</div>
+					<div class="description-top border-top">
+						<p class="font-13">{{ res.attributes.short_description.value }}</p>
+					</div>
+					<form class="product-size">
+						{% if res.sizes is not empty %}
+						<p class="select-text float-start mb-0">Select Size:</p>
+						<div class="btn-group size-group" role="group">
+							{% for label, value in res.sizes %}
+								<input type="radio" class="btn-check" name="size" id="size-{{ loop.index }}" value="{{ value }}" {% if loop.first %}checked{% endif %} />
+								<label class="btn btn-outline-primary" for="size-{{ loop.index }}">{{ label }}</label>
+							{% endfor %}
+						</div>
+						{% endif %}
+					</form>
+					<form method="POST" action="/add_to_cart" class="add-to-cart-form">
+						<input type="hidden" name="id_product" value="{{ res.id }}">
+						<input type="hidden" name="pic" value="{{ res.attributes.img1.value }}">
+						
+						<div class="action d-flex">
+							<div class="quantity-btn d-flex">
+								<div class="btn-minus">-</div>
+								<input name="quantity" value="1" min="1" max="99">
+								<div class="btn-plus">+</div>
+							</div>
+							<button type="submit" class="btn btn-dark add-cart-bt">
+								<img class="mb-1 me-2" src="/assets/images/shopping-bag-icon.svg"> 
+								{% trans %}Add to cart{% endtrans %}
+							</button>
+						</div>
+					</form>
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button px-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+									Description
+								</button>
+							</h2>
+							<div id="flush-collapseOne" class="accordion-collapse collapse show">
+								<div class="accordion-body px-0 py-4">{{ res.attributes.description.value|raw }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% if res.attributes.related_items.value is not empty %}
+<section class="related-products pb-4">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2 class="heading font-30 text-dark my-1">Related Products</h2>
+			</div>
+		</div>
+		<div class="row">
+			{% for item in res.attributes.related_items.value %}
+			<div class="col-sm-6 col-md-3 col-12 px-0">
+				<div class="product-wrap">
+					<a href="/product/{{ item.permalink ?: item.id }}">
+						<figure class="product-img">
+							<img class="display-img" src="{{ item.attributes.img1.value }}">
+							<img class="hover-img" src="{{ item.attributes.img2.value|default(item.attributes.img1.value) }}">
+						</figure>
+					</a>
+					<div class="product-content">
+						<a href="/product/{{ item.permalink ?: item.id }}">
+							<h2 class="product-name">{{ item.attributes.name.value }}</h2>
+						</a>
+						<p class="product-price">€{{ item.attributes.price.value|number_format(2) }}</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}
+{% endblock %}

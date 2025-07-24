@@ -1,0 +1,20 @@
+{% extends "page.twig" %}
+
+{% block content %}
+
+<div class="container">
+{% include 'content_block.twig' %}
+<div style="clear:left;"></div>
+</div>
+
+{% if res!=0 %}
+{% include "product_listing.twig" %}
+{% else %}
+
+    <div class="col-md-12">
+        Keine Produkte gefunden
+    </div>
+
+{% endif %}
+
+{% endblock %}

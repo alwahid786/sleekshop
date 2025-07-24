@@ -1,0 +1,200 @@
+{% extends 'page.twig' %}
+
+{% block content %}
+<section class="shipping-cart-wrap summary-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-xl-12 col-12">
+				<div class="top-heading-wrapper border-top border-bottom">
+					<h1 class="font-40 text-dark crimson-regular">{%trans%}Payment Method{%endtrans%}</h1>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<div class="helena-card p-4 mt-4">
+					<h3 class="crimson-regular font-24 mb-4">{%trans%}Choose Your Payment Method{%endtrans%}</h3>
+					
+					<form method="POST" action="order_summary" class="helena-form" id="payment-form">
+						<div class="payment-methods">
+							<!-- PayPal -->
+							{% if payment_methods.PayPal %}
+							<div class="helena-card p-3 mb-3 payment-option">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="id_payment" id="payment_paypal" value="{{payment_methods.PayPal.id}}" checked>
+									<label class="form-check-label hind-medium font-16 d-flex align-items-center justify-content-between w-100" for="payment_paypal">
+										<div class="payment-info">
+											<div class="payment-name">{%trans%}PayPal{%endtrans%}</div>
+											<div class="payment-description hind-regular font-14 text-muted">{%trans%}Pay easily with PayPal{%endtrans%}</div>
+										</div>
+										<div class="payment-icon">
+											<img src="assets/images/paypal.png" alt="PayPal" width="60">
+										</div>
+									</label>
+								</div>
+							</div>
+							{% endif %}
+							
+							<!-- Stripe Credit Card -->
+							{% if payment_methods.Stripe %}
+							<div class="helena-card p-3 mb-3 payment-option">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="id_payment" id="payment_stripe" value="{{payment_methods.Stripe.id}}">
+									<label class="form-check-label hind-medium font-16 d-flex align-items-center justify-content-between w-100" for="payment_stripe">
+										<div class="payment-info">
+											<div class="payment-name">{%trans%}Credit Card{%endtrans%}</div>
+											<div class="payment-description hind-regular font-14 text-muted">{%trans%}Pay with your credit card{%endtrans%}</div>
+										</div>
+										<div class="payment-icon">
+											<img src="assets/images/stripe.png" alt="Credit Card" width="60">
+										</div>
+									</label>
+								</div>
+							</div>
+							{% endif %}
+							
+							<!-- Sofort -->
+							{% if payment_methods.Sofortueberweisung %}
+							<div class="helena-card p-3 mb-3 payment-option">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="id_payment" id="payment_sofort" value="{{payment_methods.Sofortueberweisung.id}}">
+									<label class="form-check-label hind-medium font-16 d-flex align-items-center justify-content-between w-100" for="payment_sofort">
+										<div class="payment-info">
+											<div class="payment-name">{%trans%}Sofort Banking{%endtrans%}</div>
+											<div class="payment-description hind-regular font-14 text-muted">{%trans%}Comfortable payment with your bank account{%endtrans%}</div>
+										</div>
+										<div class="payment-icon">
+											<img src="assets/images/sofortueberweisung.png" alt="Sofort" width="60">
+										</div>
+									</label>
+								</div>
+							</div>
+							{% endif %}
+							
+							<!-- Pre-Payment -->
+							{% if payment_methods.PrePayment %}
+							<div class="helena-card p-3 mb-3 payment-option">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="id_payment" id="payment_prepay" value="{{payment_methods.PrePayment.id}}">
+									<label class="form-check-label hind-medium font-16 d-flex align-items-center justify-content-between w-100" for="payment_prepay">
+										<div class="payment-info">
+											<div class="payment-name">{%trans%}Bank Transfer{%endtrans%}</div>
+											<div class="payment-description hind-regular font-14 text-muted">{%trans%}Pay after receiving your invoice{%endtrans%}</div>
+										</div>
+										<div class="payment-icon">
+											<img src="assets/images/vorkasse.jpg" alt="Bank Transfer" width="60">
+										</div>
+									</label>
+								</div>
+							</div>
+							{% endif %}
+						</div>
+						
+						<!-- Credit Card Details Section -->
+						<div id="credit-card-details" class="helena-card p-4 mt-4 helena-light-bg" style="display:none;">
+							<h4 class="crimson-regular font-20 mb-3">{%trans%}Credit Card Information{%endtrans%}</h4>
+							
+							<div class="form-group mb-3">
+								<label class="hind-medium font-14 mb-2">{%trans%}Card Number{%endtrans%} *</label>
+								<input type="text" name="card_number" class="form-control form-control-lg card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Expiry Month{%endtrans%} *</label>
+										<select name="exp_month" class="form-control form-control-lg card-expiry-month">
+											<option value="">{%trans%}Month{%endtrans%}</option>
+											{% for i in 1..12 %}
+												<option value="{{ '%02d'|format(i) }}">{{ '%02d'|format(i) }}</option>
+											{% endfor %}
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Expiry Year{%endtrans%} *</label>
+										<select name="exp_year" class="form-control form-control-lg card-expiry-year">
+											<option value="">{%trans%}Year{%endtrans%}</option>
+											{% for year in "now"|date("Y").."now"|date("Y")+10 %}
+												<option value="{{year}}">{{year}}</option>
+											{% endfor %}
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}CVC{%endtrans%} *</label>
+										<input type="text" name="cvc" class="form-control form-control-lg card-cvc" placeholder="123" maxlength="4">
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-group mb-3">
+								<label class="hind-medium font-14 mb-2">{%trans%}Cardholder Name{%endtrans%} *</label>
+								<input type="text" name="cardholder" class="form-control form-control-lg card-holdername" placeholder="{%trans%}Name as it appears on card{%endtrans%}">
+							</div>
+						</div>
+						
+						<!-- Security Notice -->
+						<div class="security-notice text-center mt-4 mb-4">
+							<div class="d-flex align-items-center justify-content-center">
+								<img src="assets/images/instock-icon.svg" width="20" class="me-2">
+								<span class="hind-regular font-14 text-muted">{%trans%}Your payment information is encrypted and secure{%endtrans%}</span>
+							</div>
+						</div>
+						
+						<div class="d-grid gap-2 mt-4">
+							<button type="submit" class="btn btn-dark btn-lg py-3 font-16" id="payment-submit">
+								{%trans%}Review Order{%endtrans%}
+							</button>
+							<a href="/your-data" class="btn btn-outline-dark btn-lg py-3 font-16">
+								{%trans%}Back to Address{%endtrans%}
+							</a>
+						</div>
+						
+						<!-- Hidden Fields -->
+						<input type="hidden" name="token" id="token" value="{% if payment_methods.Stripe %}{{payment_methods.Stripe.attributes.public_key}}{% endif %}">
+						<input type="hidden" name="amount" class="amount" value="{{cart.sum}}">
+						<input type="hidden" name="currency" class="currency" value="EUR">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+// Format card number input
+document.addEventListener('DOMContentLoaded', function() {
+	const cardNumberInput = document.querySelector('.card-number');
+	if (cardNumberInput) {
+		cardNumberInput.addEventListener('input', function(e) {
+			let value = e.target.value.replace(/\s/g, '').replace(/[^0-9]/gi, '');
+			let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+			e.target.value = formattedValue;
+		});
+	}
+
+	// Show/hide credit card details based on payment method
+	document.querySelectorAll('input[name="id_payment"]').forEach(function(radio) {
+		radio.addEventListener('change', function() {
+			const creditCardDetails = document.getElementById('credit-card-details');
+			
+			if (this.id === 'payment_stripe') {
+				creditCardDetails.style.display = 'block';
+			} else {
+				creditCardDetails.style.display = 'none';
+			}
+		});
+	});
+
+	// Initialize - check if stripe is selected
+	const stripeRadio = document.getElementById('payment_stripe');
+	if (stripeRadio && stripeRadio.checked) {
+		document.getElementById('credit-card-details').style.display = 'block';
+	}
+});
+</script>
+{% endblock %}

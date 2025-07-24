@@ -1,0 +1,112 @@
+{% extends 'page.twig' %}
+
+{% block content %}
+	<section class="shipping-cart-wrap summary-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12 col-xl-12 col-12">
+					<div class="top-heading-wrapper border-top border-bottom">
+						<h1 class="font-40 text-dark crimson-regular">Shopping Cart</h1>
+					</div>
+				</div>
+			</div>
+
+			{% if res == 0 %}
+				<div class="row">
+					<div class="col-12 text-center py-5">
+						<h2>Your cart is empty</h2>
+						<a href="/" class="btn btn-lg btn-primary mt-3">Back to Shop</a>
+					</div>
+				</div>
+			{% else %}
+				<div
+					class="row pe-0">
+					<!-- Products Table -->
+					<div class="col-md-12 col-lg-7 col-xl-7 col-12">
+						<div class="products-wrapper mt-0">
+							<h2 class="font-24 text-dark d-inline hind-semibold">Products</h2>
+							<table class="product-table w-100 border-top mt-1">
+								<tbody>
+									{% set sum_tax = 0 %}
+									{% for value in res.contents %}
+										{% set sum_tax = sum_tax + (value.sum_price * value.attributes.sys_tax / (value.attributes.sys_tax + 1)) %}
+										<tr>
+											<td>
+												<figure class="product-img me-3">
+													<img src="{{ value.attributes.pic }}" alt="{{ value.name }}" width="80">
+												</figure>
+											</td>
+											<td>
+												<p class="product-name mb-0 font-24 text-dark crimson-regular">{{ value.name }}</p>
+												<p class="product-name mb-0 font-14 text-dark text-capitalize hind-regular">{{ value.description }}</p>
+												{% if value.attributes.size is defined %}
+													<p class="product-size mb-0 text-dark hind-regular">Size:
+														<span class="size">{{ value.attributes.size }}</span>
+													</p>
+												{% endif %}
+											</td>
+											<td>
+												<div class="price-mini-box text-end">
+													<p class="hind-bold font-18">{{ value.sum_price|number_format(2) }}
+														EUR</p>
+													<a href="/del_from_cart?id={{ value.id }}" class="remove-btn text-decoration-underline" role="button">Remove</a>
+												</div>
+											</td>
+										</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<!-- Order Summary -->
+					<div class="col-md-12 col-lg-5 col-xl-5 col-12 pe-0">
+						<div class="summary-order mt-5 mt-lg-0 hind-regular">
+							<h2 class="font-30 text-dark d-inline lh-base crimson-regular">Order Summary</h2>
+							<table class="checkout-subtotal w-100 mt-4">
+								<thead>
+									<tr>
+										<th class="product-name hind-regular">Pieces ({{ res.contents|length }})</th>
+										<th class="product-total hind-regular">{{ res.sum|number_format(2) }}
+											EUR</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="cart-subtotal">
+										<td>Shipping
+											<img src="/assets/images/question-circle-fill-icon.svg" width="16" height="16" data-bs-toggle="tooltip" title="Shipping calculated at checkout"></td>
+										<td>
+											<span class="calculated-text font-12">Calculated At Checkout</span>
+										</td>
+									</tr>
+									<tr>
+										<td>Included Tax</td>
+										<td>{{ sum_tax|number_format(2) }}
+											EUR</td>
+									</tr>
+								</tbody>
+								<tfoot class="border-top">
+									<tr class="order-total font-18">
+										<td>Total</td>
+										<td class="check-total-price">
+											<strong>{{ res.sum|number_format(2) }}
+												EUR</strong>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+
+							<a class="btn btn-dark check-order-bt w-100 font-16" href="/your-data">Checkout</a>
+							<h6 class="free-shipping-text mt-4 pt-2 text-center">Free Shipping On Orders Over 650 EUR</h6>
+							<h6 class="free-shipping-text text-center mt-3 mb-3">
+								Read More About Our Full
+								<a href="/return-policy" class="text-decoration-underline">Return and Refunds Policy</a>
+							</h6>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</section>
+{% endblock %}
+

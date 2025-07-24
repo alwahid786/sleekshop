@@ -1,0 +1,28 @@
+
+{% for item in res.contents.byclass.content_block %}
+{##SATURN##}
+{%if item.attributes.layout.value == 'saturn' %}
+{% include "layout_saturn.twig" %}
+{%endif%}
+
+{##MARS##}
+{%if item.attributes.layout.value == 'mars' %}
+{% include "layout_mars.twig" %}
+{%endif%}
+
+{##MERCURY##}
+{%if item.attributes.layout.value == 'mercur' %}
+{% include "layout_mercur.twig" %}
+{%endif%}
+
+{##NEPTUN##}
+{%if item.attributes.layout.value == 'neptun' %}
+{% include "layout_neptun.twig" %}
+{%endif%}
+
+{##PLUTO##}
+{%if item.attributes.layout.value == 'pluto' %}
+{% include "layout_pluto.twig" %}
+{%endif%}
+
+{%endfor%}

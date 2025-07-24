@@ -1,0 +1,86 @@
+{% extends "page.twig" %}
+
+{% block content %}
+<section class="error-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-12 text-center">
+                <div class="error-content">
+                    <div class="error-image mb-4">
+                        <h1 class="error-code crimson-bold display-1 text-dark mb-0">404</h1>
+                    </div>
+                    
+                    <div class="error-text mb-5">
+                        <h2 class="crimson-semibold font-40 text-dark mb-3">{%trans%}Page Not Found{%endtrans%}</h2>
+                        <p class="hind-regular font-18 text-muted mb-4">
+                            {%trans%}Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.{%endtrans%}
+                        </p>
+                    </div>
+
+                    <div class="error-actions">
+                        <a href="/" class="btn btn-dark btn-lg px-5 py-3 hind-bold font-16 text-uppercase me-3 mb-3">
+                            {%trans%}Back to Home{%endtrans%}
+                        </a>
+                        <a href="/shop" class="btn btn-outline-dark btn-lg px-5 py-3 hind-bold font-16 text-uppercase mb-3">
+                            {%trans%}Continue Shopping{%endtrans%}
+                        </a>
+                    </div>
+
+                    <div class="error-suggestions mt-5">
+                        <p class="hind-medium font-16 text-dark mb-3">{%trans%}You might be interested in:{%endtrans%}</p>
+                        <div class="suggestion-links">
+                            <a href="/collection" class="text-decoration-none text-muted hind-regular me-4">{%trans%}Collections{%endtrans%}</a>
+                            <a href="/stories" class="text-decoration-none text-muted hind-regular me-4">{%trans%}Stories{%endtrans%}</a>
+                            <a href="/contact-us" class="text-decoration-none text-muted hind-regular">{%trans%}Contact Us{%endtrans%}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.error-section {
+    min-height: 70vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+}
+
+.error-code {
+    font-size: 12rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-outline-dark:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.suggestion-links a:hover {
+    color: #212529 !important;
+    text-decoration: underline !important;
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 8rem;
+    }
+    
+    .btn-lg {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem !important;
+    }
+}
+</style>
+{% endblock %}

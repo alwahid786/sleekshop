@@ -1,0 +1,92 @@
+{% extends "page.twig" %}
+
+{% block content %}
+<section class="logout-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-12 text-center">
+                <div class="logout-wrapper helena-card p-5">
+                    <div class="logout-icon mb-4">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 17L21 12L16 7" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12H9" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="logout-content">
+                        <h2 class="crimson-semibold font-40 text-dark mb-3">{%trans%}Successfully Logged Out{%endtrans%}</h2>
+                        <p class="hind-regular font-18 text-muted mb-4">
+                            {%trans%}Thank you for visiting Helena. You have been securely logged out of your account.{%endtrans%}
+                        </p>
+                    </div>
+
+                    <div class="logout-actions">
+                        <a href="/" class="btn btn-dark btn-lg px-5 py-3 hind-bold font-16 text-uppercase me-3 mb-3">
+                            {%trans%}Continue Shopping{%endtrans%}
+                        </a>
+                        <a href="/login" class="btn btn-outline-dark btn-lg px-5 py-3 hind-bold font-16 text-uppercase mb-3">
+                            {%trans%}Sign In Again{%endtrans%}
+                        </a>
+                    </div>
+
+                    <div class="logout-suggestions mt-4">
+                        <p class="hind-medium font-14 text-muted mb-2">{%trans%}Explore more:{%endtrans%}</p>
+                        <div class="suggestion-links">
+                            <a href="/collection" class="text-decoration-none text-muted hind-regular me-3 font-14">{%trans%}New Collection{%endtrans%}</a>
+                            <a href="/stories" class="text-decoration-none text-muted hind-regular me-3 font-14">{%trans%}Stories{%endtrans%}</a>
+                            <a href="/contact-us" class="text-decoration-none text-muted hind-regular font-14">{%trans%}Contact{%endtrans%}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.logout-section {
+    min-height: 70vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+    display: flex;
+    align-items: center;
+}
+
+.logout-icon svg {
+    animation: fadeInScale 0.6s ease forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logout-wrapper {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.suggestion-links a:hover {
+    color: #212529 !important;
+    text-decoration: underline !important;
+}
+
+@media (max-width: 768px) {
+    .btn-lg {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem !important;
+    }
+    
+    .logout-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+</style>
+{% endblock %}

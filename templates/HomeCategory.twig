@@ -1,0 +1,23 @@
+<section class="home-category">
+	<div class="container-fluid px-0">
+		<div class="category-wrap">
+			{% set shown_names = [] %}
+			{% set count = 0 %}
+
+			{% for category in allCategories %}
+				{% if category.name not in shown_names and count < 5 %}
+					{% set shown_names = shown_names | merge([category.name]) %}
+					{% set count = count + 1 %}
+
+					<div class="category-box">
+						<a href="category.html">
+							<img class="w-100" src="assets/images/top-product-image-{{ loop.index + 4 }}.jpg" alt="{{ category.name }}">
+							<h4 class="cate-title">{{ category.name }}</h4>
+						</a>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+

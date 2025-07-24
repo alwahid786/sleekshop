@@ -1,0 +1,23 @@
+{% extends "page.twig" %}
+
+{% block content %}
+{% include "herosection.twig" %}
+<section class="product-slide">
+  <div class="container-fluid px-0">
+    <div class="row mx-0">
+      <div class="col-12 text-center">
+        <h3 class="heading font-30 text-dark">Top Products Collection</h3>
+      </div>
+    </div>
+
+{% include "OwlCarcousel.twig" %}
+    
+  </div>
+</section>
+{% include "HomeCategory.twig" %}
+
+
+{% include "BestSeller.twig" %}
+    
+
+{% endblock %}

@@ -1,0 +1,29 @@
+
+
+
+<section class="product-slide">
+	<div class="container-fluid px-0">
+		<div class="row mx-0">
+			<div class="col-12 text-center">
+				<h3 class="heading font-30 text-dark">Best Seller</h3>
+			</div>
+		</div>
+		<div class="owl-carousel owl-theme product-slider" id="best-seller-slider">
+          {% for value in res.products %}
+		    <div class="item">
+		    	<div class="product-wrap">
+		    		<a href="{% if value.permalink != '' %}/{{ category }}/{{ value.permalink }}{% else %}/{{ category }}/{{ value.id }}{% endif %}"><img src="{{ value.attributes.img1.value ?? '/assets/images/default-product.jpg' }}"></a>
+		    		<div class="product-content">
+		    			<a href="{% if value.permalink != '' %}/{{ category }}/{{ value.permalink }}{% else %}/{{ category }}/{{ value.id }}{% endif %}"><h4 class="product-name">{{ value.attributes.name.value }}</h4></a>
+		    			<p class="product-price">$ {{ value.attributes.price.value | number_format(2, '.', ',') }}</p>
+		    		</div>
+		    	</div>
+		    </div>
+		   {% else %}
+            <div class="item text-center p-4">
+              <p>No best seller products available at this time.</p>
+            </div>
+            {% endfor %}
+		</div>
+	</div>
+</section>

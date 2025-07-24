@@ -1,0 +1,252 @@
+{% extends 'page.twig' %}
+
+{% block content %}
+<section class="shipping-cart-wrap summary-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-xl-12 col-12">
+				<div class="top-heading-wrapper border-top border-bottom">
+					<h1 class="font-40 text-dark crimson-regular">{%trans%}Your Information{%endtrans%}</h1>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<div class="helena-card p-4 mt-4">
+					{% if error_count>0 %}
+					<div class="alert alert-danger mb-4" role="alert">
+						<strong>{%trans%}Please fill in all required fields{%endtrans%}</strong>
+					</div>
+					{% endif %}
+					
+					<form method="POST" action="userdata" class="helena-form" id="submit">
+						<h3 class="crimson-regular font-24 mb-4">{%trans%}Billing Information{%endtrans%}</h3>
+						
+						<div class="form-group mb-3 {{error.email}}">
+							<label class="hind-medium font-14 mb-2">{%trans%}Email Address{%endtrans%} *</label>
+							<input type="email" name="email" class="form-control form-control-lg" value="{{ userdata.email }}" required>
+						</div>
+						
+						<div class="form-group mb-3">
+							<label class="hind-medium font-14 mb-2">{%trans%}Salutation{%endtrans%}</label>
+							<select name="salutation" class="form-control form-control-lg">
+								<option value="">{%trans%}Please select{%endtrans%}</option>
+								<option value="Mrs" {% if userdata.salutation=='Mrs' %}selected{%endif%}>{%trans%}Mrs{%endtrans%}</option>
+								<option value="Mr" {% if userdata.salutation=='Mr' %}selected{%endif%}>{%trans%}Mr{%endtrans%}</option>
+							</select>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group mb-3 {{error.firstname}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}First Name{%endtrans%} *</label>
+									<input type="text" name="firstname" class="form-control form-control-lg" value="{{userdata.firstname}}" required>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group mb-3 {{error.lastname}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}Last Name{%endtrans%} *</label>
+									<input type="text" name="lastname" class="form-control form-control-lg" value="{{userdata.lastname}}" required>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group mb-3">
+									<label class="hind-medium font-14 mb-2">{%trans%}Company{%endtrans%}</label>
+									<input type="text" name="companyname" class="form-control form-control-lg" value="{{userdata.companyname}}">
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group mb-3">
+									<label class="hind-medium font-14 mb-2">{%trans%}Department{%endtrans%}</label>
+									<input type="text" name="department" class="form-control form-control-lg" value="{{userdata.department}}">
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="form-group mb-3 {{error.street}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}Street{%endtrans%} *</label>
+									<input type="text" name="street" class="form-control form-control-lg" value="{{userdata.street}}" required>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="form-group mb-3 {{error.number}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}Number{%endtrans%} *</label>
+									<input type="text" name="number" class="form-control form-control-lg" value="{{userdata.number}}" required>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group mb-3 {{error.city}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}City{%endtrans%} *</label>
+									<input type="text" name="city" class="form-control form-control-lg" value="{{userdata.city}}" required>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group mb-3 {{error.zip}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}Postal Code{%endtrans%} *</label>
+									<input type="text" name="zip" class="form-control form-control-lg" value="{{userdata.zip}}" required>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group mb-3 {{error.state}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}State/Province{%endtrans%} *</label>
+									<input type="text" name="state" class="form-control form-control-lg" value="{{userdata.state}}" required>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group mb-3 {{error.country}}">
+									<label class="hind-medium font-14 mb-2">{%trans%}Country{%endtrans%} *</label>
+									<select name="country" class="form-control form-control-lg" required>
+										<option value="">{%trans%}Please choose your country{%endtrans%}</option>
+										{% for value in delivery_countries.countries %}
+											<option value="{{value.iso}}" {% if userdata.country == value.iso %} selected {%endif%}>{{ value.printable_name }}</option>
+										{% else %}
+											<option value="DE" {% if userdata.country=='DE'%} selected {%endif%}>{%trans%}Germany{%endtrans%}</option>
+										{% endfor %}
+									</select>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group mb-4">
+							<label class="hind-medium font-14 mb-2">{%trans%}Order Notes{%endtrans%}</label>
+							<textarea name="notes" class="form-control form-control-lg" rows="3" placeholder="{%trans%}Optional notes about your order{%endtrans%}">{{userdata.notes}}</textarea>
+						</div>
+						
+						<div class="helena-card p-3 mb-4 helena-light-bg">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="ship-box" name="diffaddress" value="diffadd" onclick="toggleAddr()">
+								<label class="form-check-label hind-medium font-16" for="ship-box">
+									{%trans%}Ship to a different address?{%endtrans%}
+								</label>
+							</div>
+						</div>
+						
+						<div id="secondaryaddr" style="display:none;">
+							<h3 class="crimson-regular font-24 mb-4">{%trans%}Shipping Information{%endtrans%}</h3>
+							
+							<div class="form-group mb-3">
+								<label class="hind-medium font-14 mb-2">{%trans%}Salutation{%endtrans%}</label>
+								<select name="dsalutation" class="form-control form-control-lg">
+									<option value="">{%trans%}Please select{%endtrans%}</option>
+									<option value="Mrs" {% if userdata.salutation=='Mrs' %}selected{%endif%}>{%trans%}Mrs{%endtrans%}</option>
+									<option value="Mr" {% if userdata.salutation=='Mr' %}selected{%endif%}>{%trans%}Mr{%endtrans%}</option>
+								</select>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}First Name{%endtrans%} *</label>
+										<input type="text" name="dfirstname" class="form-control form-control-lg" value="{{userdata.firstname}}">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Last Name{%endtrans%} *</label>
+										<input type="text" name="dlastname" class="form-control form-control-lg" value="{{userdata.lastname}}">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Company{%endtrans%}</label>
+										<input type="text" name="dcompanyname" class="form-control form-control-lg" value="{{userdata.companyname}}">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Department{%endtrans%}</label>
+										<input type="text" name="ddepartment" class="form-control form-control-lg" value="{{userdata.department}}">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-8">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Street{%endtrans%} *</label>
+										<input type="text" name="dstreet" class="form-control form-control-lg" value="{{userdata.street}}">
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Number{%endtrans%} *</label>
+										<input type="text" name="dnumber" class="form-control form-control-lg" value="{{userdata.number}}">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}City{%endtrans%} *</label>
+										<input type="text" name="dcity" class="form-control form-control-lg" value="{{userdata.city}}">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Postal Code{%endtrans%} *</label>
+										<input type="text" name="dzip" class="form-control form-control-lg" value="{{userdata.zip}}">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}State/Province{%endtrans%} *</label>
+										<input type="text" name="dstate" class="form-control form-control-lg" value="{{userdata.state}}">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group mb-3">
+										<label class="hind-medium font-14 mb-2">{%trans%}Country{%endtrans%} *</label>
+										<select name="dcountry" class="form-control form-control-lg">
+											<option value="">{%trans%}Please choose your country{%endtrans%}</option>
+											{% for value in delivery_countries.countries %}
+												<option value="{{value.iso}}" {% if userdata.country == value.iso %} selected {%endif%}>{{ value.printable_name }}</option>
+											{% else %}
+												<option value="DE" {% if userdata.country=='DE'%} selected {%endif%}>{%trans%}Germany{%endtrans%}</option>
+											{% endfor %}
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="d-grid gap-2 mt-4">
+							<button type="submit" class="btn btn-dark btn-lg py-3 font-16" id="btnsubmit">
+								{%trans%}Continue to Payment{%endtrans%}
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+function toggleAddr() {
+	if (document.getElementById("ship-box").checked) {
+		document.getElementById("secondaryaddr").style.display = "block";
+	} else {
+		document.getElementById("secondaryaddr").style.display = "none";
+	}
+}
+</script>
+{% endblock %}

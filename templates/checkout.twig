@@ -1,0 +1,64 @@
+{% extends 'page.twig' %}
+
+{% block content %}
+{% if error==1 %}
+<section class="shipping-cart-wrap summary-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-xl-12 col-12">
+				<div class="top-heading-wrapper border-top border-bottom">
+					<h1 class="font-40 text-dark crimson-regular">Payment Failed</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center py-5">
+				<div class="helena-card p-5">
+					<img src="assets/images/close_icon.svg" alt="Error" class="img-fluid mb-4" width="64">
+					<h2 class="crimson-regular font-30 mb-3">{%trans%}Payment Error{%endtrans%}</h2>
+					<p class="hind-regular font-16 mb-4">{%trans%}Something went wrong with the payment, but we have received your order.{%endtrans%}</p>
+					<a href="/" class="btn btn-dark px-4 py-3 font-16">BACK TO SHOP</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% else %}
+<section class="shipping-cart-wrap summary-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-xl-12 col-12">
+				<div class="top-heading-wrapper border-top border-bottom">
+					<h1 class="font-40 text-dark crimson-regular">{%trans%}Order Confirmed{%endtrans%}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center py-5">
+				<div class="helena-card p-5">
+					<img src="assets/images/instock-icon.svg" alt="Success" class="img-fluid mb-4" width="64">
+					<h2 class="crimson-regular font-30 mb-3">{%trans%}Thank you for your order!{%endtrans%}</h2>
+					<p class="hind-regular font-16 mb-4">{%trans%}Your order has been successfully placed and you will receive a confirmation email shortly.{%endtrans%}</p>
+					<a href="/" class="btn btn-dark px-4 py-3 font-16">CONTINUE SHOPPING</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+{% if res.redirect != "" %}
+	window.location.href="{{redirect|escape('js')}}";
+{% else %}
+	var stripe = Stripe('{{token}}');
+	stripe.redirectToCheckout({
+		sessionId: '{{res.token}}'
+	}).then(function (result) {
+		if (result.error) {
+			console.error('Stripe error:', result.error.message);
+		}
+	});
+{% endif %}
+</script>
+{% endif %}
+{% endblock %}

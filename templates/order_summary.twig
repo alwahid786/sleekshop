@@ -1,0 +1,182 @@
+{% extends 'page.twig' %}
+
+{% block content %}
+<section class="shipping-cart-wrap summary-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-xl-12 col-12">
+				<div class="top-heading-wrapper border-top border-bottom">
+					<h1 class="font-40 text-dark crimson-regular">{%trans%}Order Summary{%endtrans%}</h1>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<!-- Order Details -->
+			<div class="col-lg-7">
+				<div class="helena-card p-4 mt-4">
+					<!-- Delivery Address -->
+					<div class="address-section mb-4">
+						<h3 class="crimson-regular font-24 mb-3">{%trans%}Delivery Address{%endtrans%}</h3>
+						<div class="helena-card p-3 helena-light-bg">
+							<h4 class="hind-medium font-18 mb-2">{{order.delivery_salutation}} {{order.delivery_firstname}} {{order.delivery_lastname}}</h4>
+							{% if order.delivery_companyname %}
+							<p class="hind-regular font-16 mb-1">{{order.delivery_companyname}}</p>
+							{% endif %}
+							<p class="hind-regular font-16 mb-0">
+								{{order.delivery_street}} {{order.delivery_number}}<br>
+								{{order.delivery_zip}} {{order.delivery_city}}<br>
+								{{order.delivery_state}}, {{order.delivery_country}}
+							</p>
+						</div>
+					</div>
+					
+					<!-- Billing Address -->
+					<div class="address-section mb-4">
+						<h3 class="crimson-regular font-24 mb-3">{%trans%}Billing Address{%endtrans%}</h3>
+						<div class="helena-card p-3 helena-light-bg">
+							<h4 class="hind-medium font-18 mb-2">{{order.invoice_salutation}} {{order.invoice_firstname}} {{order.invoice_lastname}}</h4>
+							{% if order.invoice_companyname %}
+							<p class="hind-regular font-16 mb-1">{{order.invoice_companyname}}</p>
+							{% endif %}
+							<p class="hind-regular font-16 mb-0">
+								{{order.invoice_street}} {{order.invoice_number}}<br>
+								{{order.invoice_zip}} {{order.invoice_city}}<br>
+								{{order.invoice_state}}, {{order.invoice_country}}
+							</p>
+						</div>
+					</div>
+					
+					<!-- Payment Method -->
+					<div class="payment-section">
+						<h3 class="crimson-regular font-24 mb-3">{%trans%}Payment Method{%endtrans%}</h3>
+						<div class="helena-card p-3 helena-light-bg">
+							<div class="d-flex align-items-center">
+								<img src="assets/images/creditcard.png" alt="Payment" width="40" class="me-3">
+								<div>
+									<h4 class="hind-medium font-16 mb-1">{%trans%}Credit Card{%endtrans%}</h4>
+									<p class="hind-regular font-14 text-muted mb-0">{%trans%}Secure payment{%endtrans%}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Order Summary -->
+			<div class="col-lg-5">
+				<div class="helena-card p-4 mt-4">
+					<h3 class="crimson-regular font-24 mb-4">{%trans%}Your Order{%endtrans%}</h3>
+					
+					<!-- Products -->
+					<div class="order-products mb-4">
+						{% set sum_tax = 0 %}
+						{% for value in cart.contents %}
+							{% set sum_tax = sum_tax + (value.sum_price * value.attributes.sys_tax / (value.attributes.sys_tax + 1)) %}
+							<div class="product-item d-flex align-items-center mb-3 pb-3 border-bottom">
+								<div class="product-image me-3">
+									<img src="{{value.attributes.pic}}" alt="{{value.name}}" width="60" height="60" class="img-fluid rounded">
+								</div>
+								<div class="product-details flex-grow-1">
+									<h4 class="hind-medium font-16 mb-1">{{value.quantity}}x {{value.name}}</h4>
+									<p class="hind-regular font-14 text-muted mb-0">{{value.description|slice(0, 50)}}{% if value.description|length > 50 %}...{% endif %}</p>
+									{% if value.attributes.size %}
+									<span class="badge bg-light text-dark font-12">{%trans%}Size{%endtrans%}: {{value.attributes.size}}</span>
+									{% endif %}
+								</div>
+								<div class="product-price">
+									<span class="hind-bold font-16">{{value.sum_price|number_format(2)}} EUR</span>
+								</div>
+							</div>
+							
+							<!-- Sub-elements (if any) -->
+							{% for sub_value in value.sub_elements.contents %}
+							<div class="product-item d-flex align-items-center mb-3 pb-3 border-bottom ms-3">
+								<div class="product-image me-3">
+									<img src="{{sub_value.attributes.pic}}" alt="{{sub_value.name}}" width="40" height="40" class="img-fluid rounded">
+								</div>
+								<div class="product-details flex-grow-1">
+									<h4 class="hind-medium font-14 mb-1">{{sub_value.name}}</h4>
+									<p class="hind-regular font-12 text-muted mb-0">{{sub_value.description}}</p>
+								</div>
+								<div class="product-price">
+									<span class="hind-bold font-14">{{sub_value.sum_price|number_format(2)}} EUR</span>
+								</div>
+							</div>
+							{% endfor %}
+						{% endfor %}
+					</div>
+					
+					<!-- Order Totals -->
+					<div class="order-totals">
+						<table class="checkout-subtotal w-100 mb-3">
+							<tbody>
+								<tr class="cart-subtotal">
+									<td class="hind-regular font-16">{%trans%}Subtotal{%endtrans%}</td>
+									<td class="text-end hind-medium font-16">{{(cart.sum - sum_tax)|number_format(2)}} EUR</td>
+								</tr>
+								<tr class="cart-tax">
+									<td class="hind-regular font-16">{%trans%}Tax{%endtrans%}</td>
+									<td class="text-end hind-medium font-16">{{sum_tax|number_format(2)}} EUR</td>
+								</tr>
+								<tr class="cart-shipping">
+									<td class="hind-regular font-16">{%trans%}Shipping{%endtrans%}</td>
+									<td class="text-end hind-medium font-16">{%trans%}Calculated at checkout{%endtrans%}</td>
+								</tr>
+							</tbody>
+							<tfoot class="border-top">
+								<tr class="order-total">
+									<td class="hind-bold font-18">{%trans%}Total{%endtrans%}</td>
+									<td class="text-end hind-bold font-18">{{cart.sum|number_format(2)}} EUR</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					
+					<!-- Order Actions -->
+					<div class="order-actions d-grid gap-2">
+						<form method="POST" action="checkout" id="final-order-form">
+							<!-- Hidden payment fields -->
+							<input type="hidden" name="token" value="{{token}}">
+							<input type="hidden" name="card_number" value="{{card_number}}">
+							<input type="hidden" name="exp_month" value="{{exp_month}}">
+							<input type="hidden" name="exp_year" value="{{exp_year}}">
+							<input type="hidden" name="cvc" value="{{cvc}}">
+							
+							<button type="submit" class="btn btn-dark btn-lg py-3 font-16 order-btn" onclick="OrderPlaced()">
+								{%trans%}Place Order{%endtrans%}
+							</button>
+						</form>
+						
+						<div id="wait-msg" style="display:none;" class="text-center">
+							<div class="spinner-border text-dark" role="status">
+								<span class="visually-hidden">{%trans%}Processing...{%endtrans%}</span>
+							</div>
+							<p class="hind-regular font-16 mt-2">{%trans%}Processing your order...{%endtrans%}</p>
+						</div>
+						
+						<a href="/payment-methods" class="btn btn-outline-dark btn-lg py-3 font-16">
+							{%trans%}Back to Payment{%endtrans%}
+						</a>
+					</div>
+					
+					<!-- Security Badge -->
+					<div class="security-notice text-center mt-4">
+						<div class="d-flex align-items-center justify-content-center">
+							<img src="assets/images/instock-icon.svg" width="20" class="me-2">
+							<span class="hind-regular font-12 text-muted">{%trans%}Secure 256-bit SSL encryption{%endtrans%}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+function OrderPlaced() {
+	document.querySelector('.order-btn').style.display = 'none';
+	document.getElementById('wait-msg').style.display = 'block';
+}
+</script>
+{% endblock %}

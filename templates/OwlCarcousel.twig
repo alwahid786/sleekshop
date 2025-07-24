@@ -1,0 +1,32 @@
+
+<div class="product-slider owl-carousel owl-theme" id="product-slider">
+  {% for value in res.products %}
+    <div class="item">
+      <div class="product-wrap">
+
+        <a href="{% if value.permalink != '' %}/{{ category }}/{{ value.permalink }}{% else %}/{{ category }}/{{ value.id }}{% endif %}">
+          <img
+            src="{{ value.attributes.img1.value ?? '/assets/images/default-product.jpg' }}"
+            alt="{{ value.attributes.name.value }}"
+            height="300"
+            loading="lazy"
+          >
+        </a>
+
+        <div class="product-content">
+          <a href="{% if value.permalink != '' %}/{{ category }}/{{ value.permalink }}{% else %}/{{ category }}/{{ value.id }}{% endif %}">
+            <h4 class="product-name">{{ value.attributes.name.value }}</h4>
+          </a>
+          <p class="product-price">
+            {{ value.attributes.price.value | number_format(2, '.', ',') }} EUR
+          </p>
+        </div>
+
+      </div>
+    </div>
+  {% else %}
+    <div class="item text-center p-4">
+      <p>No products available at this time.</p>
+    </div>
+  {% endfor %}
+</div>

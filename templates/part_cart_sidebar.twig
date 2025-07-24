@@ -1,0 +1,103 @@
+<div class="cart-sidebar shipping-cart-wrap summary-wrap" id="cart-sidebar">
+	<div class="products-wrapper mt-0">
+		<div class="sidebar-header d-flex justify-content-between align-items-center border-top border-bottom py-4 mb-3">
+			<h3 class="font-40 text-dark d-inline crimson-regular mb-0">My Cart</h3>
+			<div class="cart-close ms-auto me-0" id="cart-close">
+				<img src="/assets/images/close_icon.svg" width="18" height="18">
+			</div>
+		</div>
+
+		<h4 class="sub-heading font-24 hind-regular mb-0">Order Summary</h4>
+
+		<table class="product-table w-100 mt-1">
+			<tbody>
+				{% for item in cart.contents %}
+					<tr>
+						<td>
+							<figure class="product-img me-3">
+								<img src="{{ item.attributes.pic ?? '/assets/images/default-product.jpg' }}" alt="{{ item.name }}">
+							</figure>
+						</td>
+						<td>
+							<p class="product-name mb-0 font-24 text-dark crimson-regular">{{ item.name }}</p>
+							{% if item.description is defined %}
+								<p class="product-name mb-0 font-14 text-dark text-capitalize hind-regular">
+									{{ item.description }}
+								</p>
+							{% endif %}
+							{% if item.attributes.size is defined %}
+								<p class="product-size mb-0 text-dark hind-regular">
+									Size:
+									<span class="size">{{ item.attributes.size }}</span>
+								</p>
+							{% endif %}
+						</td>
+						<td>
+							<div class="price-mini-box text-end">
+								<p class="hind-bold font-18">{{ item.sum_price|number_format(2) }}
+									EUR</p>
+								<a href="/del_from_cart?id={{ item.id }}" class="remove-btn text-decoration-underline" role="button">Remove</a>
+							</div>
+						</td>
+					</tr>
+
+					{# Optional sub-elements (e.g. product add-ons) #}
+					{% for sub in item.sub_elements.contents %}
+						<tr class="ps-4">
+							<td></td>
+							<td>
+								<p class="mb-0 text-dark">{{ sub.name }}</p>
+								<p class="text-muted">{{ sub.description }}</p>
+							</td>
+							<td class="text-end">
+								<p class="font-14">{{ sub.sum_price|number_format(2) }}
+									USD</p>
+							</td>
+						</tr>
+					{% endfor %}
+				{% else %}
+					<tr>
+						<td colspan="3" class="text-center">Your cart is empty.</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<table class="checkout-subtotal border-bottom w-100 mt-0 mb-4">
+			<tbody>
+				<tr class="cart-subtotal">
+					<td>
+						Shipping
+						<img src="/assets/images/question-circle-fill-icon.svg" width="16" height="16" data-bs-toggle="tooltip" title="Calculated during checkout">
+					</td>
+					<td>
+						<span class="calculated-text font-12">Calculated At Next Step</span>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot class="border-top">
+				<tr class="order-total">
+					<td>Total</td>
+					<td class="check-total-price">
+						<span>EUR</span>
+						<strong>{{ (cart.sum + cart.delivery_costs.sum)|number_format(2) }}
+							EUR</strong>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+
+<a class="btn btn-dark check-order-bt w-100 font-16" href="/cart">{% trans %}To cart{% endtrans %}</a>
+
+
+
+		<h6 class="free-shipping-text mt-3 pt-2">
+			Free Shipping On Orders Over 650 EUR
+		</h6>
+		<h6 class="free-shipping-text mt-3 mb-3">
+			Read More About Our Full
+			<a href="/return-policy" class="text-decoration-underline">Return and Refunds Policy</a>
+		</h6>
+	</div>
+</div>
+

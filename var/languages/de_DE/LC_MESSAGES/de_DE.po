@@ -1,0 +1,2034 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: excalibur\n"
+"POT-Creation-Date: 2023-01-18 17:50+0100\n"
+"PO-Revision-Date: 2023-01-18 17:53+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: {%trans%};gettext;gettext_noop\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: trans.php:2 trans.php:155
+msgid "Back to shop"
+msgstr "Zurück zum Shop"
+
+#: trans.php:3
+msgid "Your cart is empty"
+msgstr "Ihr Warenkorb ist leer"
+
+#: trans.php:4
+msgid "Back"
+msgstr "Zurück"
+
+#: trans.php:5 trans.php:66 trans.php:143 trans.php:161
+msgid "Your cart"
+msgstr "Ihr Warenkorb"
+
+#: trans.php:6 trans.php:67 trans.php:162 trans.php:182
+msgid "Product"
+msgstr "Produkt"
+
+#: trans.php:7 trans.php:163
+msgid "Price"
+msgstr "Preis"
+
+#: trans.php:8 trans.php:68 trans.php:164 trans.php:183 trans.php:253
+msgid "Quantity"
+msgstr "Anzahl"
+
+#: trans.php:9 trans.php:165 trans.php:167 trans.php:174
+msgid "Sum price"
+msgstr "Summe"
+
+#: trans.php:10 trans.php:69 trans.php:70 trans.php:145 trans.php:184
+#: trans.php:185
+msgid "Sum"
+msgstr "Summe"
+
+#: trans.php:11 trans.php:168 trans.php:172
+msgid "Included tax"
+msgstr "Enthaltene Ust"
+
+#: trans.php:12 trans.php:71 trans.php:148 trans.php:290
+msgid "Next"
+msgstr "Weiter"
+
+#: trans.php:13
+msgid ""
+"The entered coupon-code seems to be invalid or you already used\n"
+"\t  this code before"
+msgstr ""
+"Der eingegebene Gutschein-Code scheint ungültig zu sein oder Sie haben "
+"diesen Code bereits verwendet\n"
+"\t  diesen Code bereits verwendet"
+
+#: trans.php:14
+msgid "I have a coupon-code"
+msgstr "Ich habe einen Coupon-Code"
+
+#: trans.php:15
+msgid "Use coupon-code"
+msgstr "Benutzen Sie den Coupon-Code"
+
+#: trans.php:16
+msgid ""
+"Etwas mit der Bezahlung hat nicht funktioniert aber Ihre Bestellung haben "
+"wir erhalten."
+msgstr ""
+
+#: trans.php:17
+msgid "Thank you for your order"
+msgstr "Vielen Dank für Ihre Bestellung"
+
+#: trans.php:18 trans.php:22 trans.php:72 trans.php:76 trans.php:87
+#: trans.php:149 trans.php:153 trans.php:180 trans.php:294
+msgid "Login"
+msgstr "Anmelden"
+
+#: trans.php:19 trans.php:24 trans.php:74 trans.php:79 trans.php:151
+#: trans.php:242
+msgid "Username"
+msgstr "Benutzername"
+
+#: trans.php:20 trans.php:26 trans.php:75 trans.php:81 trans.php:152
+#: trans.php:219 trans.php:244
+msgid "Password"
+msgstr "Passwort"
+
+#: trans.php:21 trans.php:28
+msgid "Close"
+msgstr "Schließen"
+
+#: trans.php:23 trans.php:29 trans.php:77 trans.php:83 trans.php:89
+#: trans.php:246
+msgid "Register"
+msgstr "Registrieren"
+
+#: trans.php:25 trans.php:80 trans.php:243
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: trans.php:27 trans.php:82 trans.php:245
+msgid "Repeat password"
+msgstr "Passwort wiederholen"
+
+#: trans.php:30
+#, fuzzy
+#| msgid "Payment method"
+msgid "Payment Method"
+msgstr "Bezahlmethode"
+
+#: trans.php:31 trans.php:146 trans.php:175 trans.php:208
+msgid "Payment"
+msgstr "Bezahlung"
+
+#: trans.php:32 trans.php:147 trans.php:176
+msgid "After placing your order, you will be redirected to mollie for payment."
+msgstr ""
+"Nachdem Sie Ihre Bestellung aufgegeben haben, werden Sie zur Zahlung an "
+"mollie weitergeleitet."
+
+#: trans.php:33 trans.php:91 trans.php:221 trans.php:260
+msgid "Please fill in all fields marked with *"
+msgstr "Bitte füllen sie alle mit * gekennzeichneten Felder aus"
+
+#: trans.php:34
+msgid "Anmelden"
+msgstr ""
+
+#: trans.php:35
+msgid "oder"
+msgstr ""
+
+#: trans.php:36
+#, fuzzy
+#| msgid "Register"
+msgid "Registrieren"
+msgstr "Registrieren"
+
+#: trans.php:37 trans.php:52 trans.php:92 trans.php:93 trans.php:119
+#: trans.php:120 trans.php:223 trans.php:261 trans.php:276
+msgid "Salutation"
+msgstr "Anrede"
+
+#: trans.php:38 trans.php:53 trans.php:94 trans.php:121 trans.php:224
+#: trans.php:262 trans.php:277
+msgid "Mrs"
+msgstr "Frau"
+
+#: trans.php:39 trans.php:54 trans.php:95 trans.php:122 trans.php:225
+#: trans.php:263 trans.php:278
+msgid "Mr"
+msgstr "Herr"
+
+#: trans.php:40 trans.php:55 trans.php:96 trans.php:97 trans.php:123
+#: trans.php:124 trans.php:226 trans.php:264 trans.php:279
+msgid "Firstname"
+msgstr "Vorname"
+
+#: trans.php:41 trans.php:56 trans.php:98 trans.php:99 trans.php:125
+#: trans.php:126 trans.php:227 trans.php:265 trans.php:280
+msgid "Lastname"
+msgstr "Nachname"
+
+#: trans.php:42 trans.php:57 trans.php:100 trans.php:101 trans.php:127
+#: trans.php:128 trans.php:228 trans.php:266 trans.php:281
+msgid "Company"
+msgstr "Firma"
+
+#: trans.php:43 trans.php:58 trans.php:102 trans.php:103 trans.php:129
+#: trans.php:130 trans.php:229 trans.php:267 trans.php:282
+msgid "Department"
+msgstr "Abteilung"
+
+#: trans.php:44 trans.php:59 trans.php:104 trans.php:105 trans.php:131
+#: trans.php:132 trans.php:230 trans.php:268 trans.php:283
+msgid "Street"
+msgstr "Straße"
+
+#: trans.php:45 trans.php:60 trans.php:106 trans.php:107 trans.php:133
+#: trans.php:134 trans.php:231 trans.php:269 trans.php:284
+msgid "Number"
+msgstr "Nummer"
+
+#: trans.php:46 trans.php:61 trans.php:108 trans.php:109 trans.php:135
+#: trans.php:136 trans.php:233 trans.php:270 trans.php:285
+msgid "City"
+msgstr "Stadt"
+
+#: trans.php:47 trans.php:62 trans.php:110 trans.php:111 trans.php:137
+#: trans.php:138 trans.php:232 trans.php:271 trans.php:286
+msgid "Zip"
+msgstr "PLZ"
+
+#: trans.php:48 trans.php:63 trans.php:112 trans.php:113 trans.php:139
+#: trans.php:140 trans.php:234 trans.php:272 trans.php:287
+msgid "State"
+msgstr "Staat"
+
+#: trans.php:49 trans.php:64 trans.php:115 trans.php:141 trans.php:236
+#: trans.php:273 trans.php:288
+msgid "Please choose your country"
+msgstr "Bitte wählen Sie ihr Land"
+
+#: trans.php:50 trans.php:65 trans.php:116 trans.php:142 trans.php:237
+#: trans.php:274 trans.php:289
+msgid "Germany"
+msgstr "Deutschland"
+
+#: trans.php:51 trans.php:117 trans.php:118 trans.php:238 trans.php:275
+msgid "Notes"
+msgstr "Notizen"
+
+#: trans.php:73 trans.php:78
+msgid "An error occured"
+msgstr "Ein Fehler ist aufgetreten"
+
+#: trans.php:84
+msgid "Checkout"
+msgstr "Kasse"
+
+#: trans.php:85
+msgid "Billing Details"
+msgstr "Rechnungsdetails"
+
+#: trans.php:86
+msgid "Do You Have An Account?"
+msgstr "Haben Sie ein Konto?"
+
+#: trans.php:88
+msgid "Or"
+msgstr "Oder"
+
+#: trans.php:90
+msgid "Welcome back"
+msgstr "Willkommen"
+
+#: trans.php:114 trans.php:235
+msgid "Country"
+msgstr "Land"
+
+#: trans.php:144
+msgid "Shipping"
+msgstr "Versand"
+
+#: trans.php:150
+msgid "Username and password does not match"
+msgstr "Benutzername und Passwort passen nicht zueinander"
+
+#: trans.php:154
+msgid "You successfully logged out"
+msgstr "Sie haben sich erfolgreich abgemeldet"
+
+#: trans.php:156
+msgid "Please check your order"
+msgstr "Bitte überprüfen Sie Ihre Bestellung"
+
+#: trans.php:157
+msgid "Your payment method"
+msgstr "Ihre Bezahlmethode"
+
+#: trans.php:158 trans.php:218 trans.php:220 trans.php:291
+msgid "Your data"
+msgstr "Ihre Daten"
+
+#: trans.php:159
+msgid "Delivery address:"
+msgstr "Lieferadresse:"
+
+#: trans.php:160
+msgid "Billing address:"
+msgstr "Rechnungsadresse:"
+
+#: trans.php:166 trans.php:173
+msgid "Delivery costs"
+msgstr "Lieferkosten"
+
+#: trans.php:169 trans.php:177
+msgid "Place Order"
+msgstr "Bestellung auslösen"
+
+#: trans.php:170
+msgid "Delivery Address"
+msgstr "Lieferadresse"
+
+#: trans.php:171
+msgid "Billing Address"
+msgstr "Rechnungsadresse"
+
+#: trans.php:178
+msgid "Home"
+msgstr ""
+
+#: trans.php:179
+msgid "You are logged in as"
+msgstr "Sie sind angemeldet als"
+
+#: trans.php:181
+msgid "Logout"
+msgstr "Abmelden"
+
+#: trans.php:186
+msgid "To cart"
+msgstr "Zum Warenkorb"
+
+#: trans.php:187
+msgid "Search"
+msgstr "Suchen"
+
+#: trans.php:188
+msgid "privacy"
+msgstr "datenschutz"
+
+#: trans.php:189
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: trans.php:190
+msgid "delivery-and-payment"
+msgstr "lieferung-und-versand"
+
+#: trans.php:191 trans.php:209
+msgid "Delivery"
+msgstr "Lieferung"
+
+#: trans.php:192
+msgid "terms"
+msgstr "agb"
+
+#: trans.php:193
+msgid "Terms"
+msgstr "AGB"
+
+#: trans.php:194
+msgid "imprint"
+msgstr "impressum"
+
+#: trans.php:195
+msgid "Imprint"
+msgstr "Impressum"
+
+#: trans.php:196
+msgid "Payment methods"
+msgstr "Bezahlmöglichkeiten"
+
+#: trans.php:197
+msgid "Choose your payment method"
+msgstr "Wählen sie ihre Bezahlmethode"
+
+#: trans.php:198
+msgid "Pay easily with PayPal"
+msgstr "Bezahlen sie einfach mit PayPal"
+
+#: trans.php:199
+msgid "Comfortable payment with your bank-account"
+msgstr "Komfortables Bezahlen mit ihren Bankdaten"
+
+#: trans.php:200
+msgid "Pay with your creditcard"
+msgstr "Bezahlen sie mit ihrer Kreditkarte"
+
+#: trans.php:201
+msgid ""
+"Pay easily after receiving your invoice. After that we will\n"
+"        send you the ordered items"
+msgstr ""
+"Bezahlen Sie einfach nach Erhalt Ihrer Rechnung. Danach senden wir Ihnen die "
+"bestellten Artikel"
+
+#: trans.php:202
+msgid "Creditcard number"
+msgstr "Kreditkartennummer"
+
+#: trans.php:203
+msgid "Expiration month"
+msgstr "Verfallsmonat"
+
+#: trans.php:204
+msgid "Expiration year"
+msgstr "Verfallsjahr"
+
+#: trans.php:205
+msgid "Weiter"
+msgstr ""
+
+#: trans.php:206
+msgid "Your orders"
+msgstr "Ihre Bestellungen"
+
+#: trans.php:207
+msgid "Date"
+msgstr "Datum"
+
+#: trans.php:210
+msgid "Status"
+msgstr "Status"
+
+#: trans.php:211
+msgid "Your password"
+msgstr "Ihr Passwort"
+
+#: trans.php:212
+msgid "New password saved"
+msgstr "Neues Passwort gespeichert"
+
+#: trans.php:213
+msgid "Current password"
+msgstr "Bisheriges Passwort"
+
+#: trans.php:214
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: trans.php:215
+msgid "Repeat new password"
+msgstr "Neues Passwort wiederholen"
+
+#: trans.php:216 trans.php:239
+msgid "Save"
+msgstr "Speichern"
+
+#: trans.php:217
+msgid "Orders"
+msgstr "Bestellungen"
+
+#: trans.php:222
+msgid "Fields have been updated successfully!"
+msgstr "Die Felder wurden erfolgreich aktualisiert!"
+
+#: trans.php:240
+msgid "Create an account"
+msgstr "Konto anlegen"
+
+#: trans.php:241
+msgid "The following error occured"
+msgstr "Der folgende Fehler ist aufgetreten"
+
+#: trans.php:247
+msgid "Manufacturer"
+msgstr "Hersteller"
+
+#: trans.php:248
+msgid "Available"
+msgstr "Verfügbar"
+
+#: trans.php:249
+msgid "Only a few available"
+msgstr "Nur wenige verfügbar"
+
+#: trans.php:250
+msgid "Not available"
+msgstr "Nicht verfügbar"
+
+#: trans.php:251
+msgid "Color"
+msgstr "Farbe"
+
+#: trans.php:252
+msgid "Size"
+msgstr "Größe"
+
+#: trans.php:254 trans.php:255
+msgid "Add to cart"
+msgstr "In den Warenkorb"
+
+#: trans.php:256
+msgid "This product is not available"
+msgstr "Dieses Produkt ist nicht verfügbar"
+
+#: trans.php:257
+msgid "Share this product"
+msgstr "Produkt teilen"
+
+#: trans.php:258
+msgid "Details"
+msgstr "Details"
+
+#: trans.php:259
+msgid "Also interesting for you"
+msgstr "Ebenfalls interessant"
+
+#: trans.php:292
+msgid "I am already registered"
+msgstr "Ich bin bereits registriert"
+
+#: trans.php:293
+msgid ""
+"Do you have a user account? Click the \"login\" button to login\n"
+"      with your data."
+msgstr "Haben Sie ein Konto? Klicken sie auf „login“ um sich anzumelden."
+
+#: trans.php:295
+msgid "I want to create an account"
+msgstr "Ich möchte ein Konto erstellen"
+
+#: trans.php:296
+msgid ""
+"If you haven't a useraccount yet you can create one by clicking\n"
+"      on register"
+msgstr ""
+"Wenn sie kein Benutzerkonto haben, können sie eins erstellen, indem Sie auf "
+"registrieren klicken"
+
+#: trans.php:297
+msgid "Register now"
+msgstr "Jetzt registrieren"
+
+#: trans.php:298
+msgid "I want to continue as a guest"
+msgstr "Ich möchte als Gast fortfahren"
+
+#: trans.php:299
+#, fuzzy
+#| msgid ""
+#| "You can continue as a guest. Just click the button \"continue as a "
+#| "guest\"."
+msgid ""
+"You can continue as a guest. Just click the button \"continue as a\n"
+"      guest\"."
+msgstr ""
+"Sie können als Gast fortfahren. Klicken Sie einfach auf die Schaltfläche "
+"„als Gast fortfahren“."
+
+#: trans.php:300
+msgid "Continue as a guest"
+msgstr "Als Gast fortfahren"
+
+#~ msgid "About us"
+#~ msgstr "Über uns"
+
+#~ msgid "Show product"
+#~ msgstr "Produkt anzeigen"
+
+#, fuzzy
+#~ msgid "Passowrd"
+#~ msgstr "Passwort"
+
+#~ msgid "Shopobjects"
+#~ msgstr "Shopobjekte"
+
+#~ msgid "The fundamentals of all entities in your e-commerce world"
+#~ msgstr "Die Grundlage aller Objekte in Ihrer E-Commerce Welt"
+
+#~ msgid "Search for shopobjects"
+#~ msgstr "Shopobjekte suchen"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Creator"
+#~ msgstr "Erstellt durch"
+
+#~ msgid "Instanceable"
+#~ msgstr "Instanziierbar"
+
+#~ msgid "Reset"
+#~ msgstr "Zurücksetzen"
+
+#~ msgid "Options"
+#~ msgstr "Optionen"
+
+#~ msgid "Create a new class"
+#~ msgstr "Neue Klasse erstellen"
+
+#~ msgid "Show last classes"
+#~ msgstr "Neueste Klassen anzeigen"
+
+#~ msgid "Shopobject details"
+#~ msgstr "Shopobjektdetails"
+
+#~ msgid "Search for entity requests"
+#~ msgstr "Suche nach Aufträgen"
+
+#~ msgid "Distributor"
+#~ msgstr "Distributor"
+
+#~ msgid "All"
+#~ msgstr "Alle"
+
+#~ msgid "Show last requests"
+#~ msgstr "Neueste Aufträge anzeigen"
+
+#~ msgid "Entity request"
+#~ msgstr "Aufträge"
+
+#~ msgid "Created by"
+#~ msgstr "Erstellt durch"
+
+#~ msgid "Edit"
+#~ msgstr "Bearbeiten"
+
+#~ msgid "Delete"
+#~ msgstr "Löschen"
+
+#~ msgid "Shopactive"
+#~ msgstr "Shopaktiv"
+
+#~ msgid "No data available for your report"
+#~ msgstr "Keine Daten für Ihren Bericht vorhanden"
+
+#~ msgid "Requests report daily"
+#~ msgstr "Anfragenreport täglich"
+
+#~ msgid "Total"
+#~ msgstr "Gesamt"
+
+#~ msgid "Requests"
+#~ msgstr "Anfragen"
+
+#~ msgid "Day"
+#~ msgstr "Tag"
+
+#~ msgid "email"
+#~ msgstr "E-Mail"
+
+#~ msgid "First name"
+#~ msgstr "Vorname"
+
+#~ msgid "Last name"
+#~ msgstr "Nachname"
+
+#~ msgid "Reg. date"
+#~ msgstr "Reg. Datum"
+
+#~ msgid "Create manufacturer"
+#~ msgstr "Hersteller anlegen"
+
+#~ msgid "Delivery state"
+#~ msgstr "Lieferstatus"
+
+#~ msgid "Type"
+#~ msgstr "Typ"
+
+#~ msgid "Label"
+#~ msgstr "Beschriftung"
+
+#~ msgid "Value"
+#~ msgstr "Wert"
+
+#~ msgid "Chose class"
+#~ msgstr "Klasse wählen"
+
+#~ msgid "Create content"
+#~ msgstr "Inhalt erstellen"
+
+#~ msgid "Count"
+#~ msgstr "Anzahl"
+
+#~ msgid "Add"
+#~ msgstr "Hinzufügen"
+
+#~ msgid "Traffic report daily"
+#~ msgstr "Trafficbericht täglich"
+
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Main data"
+#~ msgstr "Hauptdaten"
+
+#~ msgid "Cart"
+#~ msgstr "Warenkorb"
+
+#~ msgid "Cart sum"
+#~ msgstr "Warenkorbsumme"
+
+#~ msgid "Creation date"
+#~ msgstr "Erstellungsdatum"
+
+#~ msgid "Username modifier"
+#~ msgstr "Verändert durch"
+
+#~ msgid "Modification date"
+#~ msgstr "Veränderungsdatum"
+
+#~ msgid "eMail"
+#~ msgstr "E-Mail"
+
+#~ msgid "Phone"
+#~ msgstr "Telefonnummer"
+
+#~ msgid "Delivery data"
+#~ msgstr "Lieferdaten"
+
+#~ msgid "Invoice data"
+#~ msgstr "Rechnungsdaten"
+
+#~ msgid "Show invoice"
+#~ msgstr "Rechnung anzeigen"
+
+#~ msgid "Order status"
+#~ msgstr "Bestellstatus"
+
+#~ msgid "Order state"
+#~ msgstr "Bestellstatus"
+
+#~ msgid "Order type"
+#~ msgstr "Bestellart"
+
+#~ msgid "Delivery method"
+#~ msgstr "Liefermethode"
+
+#~ msgid "Taxclass"
+#~ msgstr "Steuerklasse"
+
+#~ msgid "Tax"
+#~ msgstr "Steuer"
+
+#~ msgid "Shipping ticket"
+#~ msgstr "Versandschein"
+
+#~ msgid "Invoice"
+#~ msgstr "Rechnung"
+
+#~ msgid "Order ready to ship"
+#~ msgstr "Bestellung ist versandfertig"
+
+#~ msgid "Parcels"
+#~ msgstr "Pakete"
+
+#~ msgid "Parcelclass"
+#~ msgstr "Paketklasse"
+
+#~ msgid "No class"
+#~ msgstr "Keine Klasse"
+
+#~ msgid "Width"
+#~ msgstr "Breite"
+
+#~ msgid "Length"
+#~ msgstr "Länge"
+
+#~ msgid "Height"
+#~ msgstr "Höhe"
+
+#~ msgid "Weight"
+#~ msgstr "Gewicht"
+
+#~ msgid "Overview of your traffic, your account and your invoices"
+#~ msgstr "Übersicht Ihres Verbrauchs, Ihrer Kontodaten und Ihrer Rechnungen"
+
+#~ msgid "Current usage"
+#~ msgstr "Aktueller Verbrauch"
+
+#~ msgid "Account"
+#~ msgstr "Konto"
+
+#~ msgid "Invoices"
+#~ msgstr "Rechnungen"
+
+#~ msgid "Used MB"
+#~ msgstr "Benutzte MB"
+
+#~ msgid "Price for 1 MB"
+#~ msgstr "Preis für ein 1 MB"
+
+#~ msgid "Final price"
+#~ msgstr "Summe"
+
+#~ msgid ""
+#~ "For the automated debit process we use the service of our partner miniPay "
+#~ "GmbH"
+#~ msgstr ""
+#~ "Für das Lastschriftverfahren arbeiten wir mit unserem Partner der miniPay "
+#~ "GmbH zusammen"
+
+#~ msgid "The activation takes place in two steps"
+#~ msgstr "Die Aktivierung geschieht in zwei Schritten"
+
+#~ msgid ""
+#~ "In the first step we need your mobile number to send you a tan - number"
+#~ msgstr ""
+#~ "Im ersten Schritt tragen Sie Ihre Mobilfunknummer ein, an die wir eine "
+#~ "TAN - Nummer schicken"
+
+#~ msgid ""
+#~ "In the next step you have to fill in your account informations and the "
+#~ "tan we send you"
+#~ msgstr ""
+#~ "Im nächsten Schritt, geben Sie Ihre Kontodaten ein und die TAN die wir "
+#~ "Ihnen geschickt haben"
+
+#~ msgid ""
+#~ "After that process we will automaticly charge the amounts for our service"
+#~ msgstr ""
+#~ "Nach diesem Prozess werden wir die fälligen Beträge automatisch abbuchen"
+
+#~ msgid "Enter your mobile number"
+#~ msgstr "Tragen Sie Ihre Mobilfunknummer ein"
+
+#~ msgid "Mobile number"
+#~ msgstr "Mobilnummer"
+
+#~ msgid "Send me a TAN"
+#~ msgstr "TAN jetzt zuschicken"
+
+#~ msgid "Enter your account informations"
+#~ msgstr "Tragen Sie Ihre Kontodaten ein"
+
+#~ msgid "Accountholder"
+#~ msgstr "Kontoinhaber"
+
+#~ msgid "Account number"
+#~ msgstr "Kontonummer"
+
+#~ msgid "Bank code number"
+#~ msgstr "Bankleitzahl"
+
+#~ msgid "Tan in your SMS"
+#~ msgstr "TAN in der erhaltenen SMS"
+
+#~ msgid "Closed"
+#~ msgstr "Abgeschlossen"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "Create new attribute"
+#~ msgstr "Neues Attribut erzeugen"
+
+#~ msgid "Save attributes"
+#~ msgstr "Attribute speichern"
+
+#~ msgid "Language"
+#~ msgstr "Sprache"
+
+#~ msgid "Attribute name"
+#~ msgstr "Attributname"
+
+#~ msgid "Attribute value"
+#~ msgstr "Attributwert"
+
+#~ msgid "Delete attribute"
+#~ msgstr "Attribut löschen"
+
+#~ msgid "Shipping provider"
+#~ msgstr "Versandanbieter"
+
+#~ msgid "No shipping provider"
+#~ msgstr "Kein Versandanbieter"
+
+#~ msgid "Save parcel"
+#~ msgstr "Paket speichern"
+
+#~ msgid "Delete parcel"
+#~ msgstr "Paket löschen"
+
+#~ msgid "Taxclass Country"
+#~ msgstr "Steuerklasse Land"
+
+#~ msgid "Taxclass name"
+#~ msgstr "Name"
+
+#~ msgid "Calculation"
+#~ msgstr "Berechnung"
+
+#~ msgid "Included"
+#~ msgstr "Inkludiert"
+
+#~ msgid "Added"
+#~ msgstr "Addiert"
+
+#~ msgid "Subtract"
+#~ msgstr "Subtrahiert"
+
+#~ msgid "Additional data"
+#~ msgstr "Zusätzliche Daten"
+
+#~ msgid "Picture"
+#~ msgstr "Bild"
+
+#~ msgid "Change your password"
+#~ msgstr "Passwort ändern"
+
+#~ msgid "Password changed"
+#~ msgstr "Passwort geändert"
+
+#~ msgid "Old Password"
+#~ msgstr "Altes Passwort"
+
+#~ msgid "Confirm new password"
+#~ msgstr "Neues Passwort bestätigen"
+
+#~ msgid "Change password"
+#~ msgstr "Passwort ändern"
+
+#~ msgid "Search for distributors"
+#~ msgstr "Distributoren suchen"
+
+#~ msgid "Create a new distributor"
+#~ msgstr "Distributor erzeugen"
+
+#~ msgid "Show last distributors"
+#~ msgstr "Neueste Distributoren anzeigen"
+
+#~ msgid "Show"
+#~ msgstr "Anzeigen"
+
+#~ msgid "Hide"
+#~ msgstr "Verbergen"
+
+#~ msgid "Edit labels"
+#~ msgstr "Beschriftungen bearbeiten"
+
+#~ msgid "Edit attributes"
+#~ msgstr "Attribute"
+
+#~ msgid "create node"
+#~ msgstr "Knoten einfügen"
+
+#~ msgid "delete node"
+#~ msgstr "Knoten löschen"
+
+#~ msgid "Create shipment"
+#~ msgstr "Versand erzeugen"
+
+#~ msgid "Show label"
+#~ msgstr "Versandetikett anzeigen"
+
+#~ msgid "Delete shipment"
+#~ msgstr "Versand löschen"
+
+#~ msgid "Payment state"
+#~ msgstr "Bezahlstatus"
+
+#~ msgid "Cration date"
+#~ msgstr "Erstellungsdatum"
+
+#~ msgid "Sum of the orders"
+#~ msgstr "Summer der Bestellungen"
+
+#~ msgid "General"
+#~ msgstr "Allgemein"
+
+#, fuzzy
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#, fuzzy
+#~ msgid "Description"
+#~ msgstr "Beschreibung"
+
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgid "User"
+#~ msgstr "Benutzer"
+
+#~ msgid "Products"
+#~ msgstr "Produkte"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorien"
+
+#~ msgid "Contents"
+#~ msgstr "Inhalte"
+
+#~ msgid "Reports"
+#~ msgstr "Berichte"
+
+#~ msgid "Objects"
+#~ msgstr "Objekte"
+
+#~ msgid "Settings"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Help"
+#~ msgstr "Hilfe"
+
+#~ msgid "Search for manufacturers"
+#~ msgstr "Hersteller suchen"
+
+#~ msgid "Create a new manufacturer"
+#~ msgstr "Hersteller erzeugen"
+
+#~ msgid "Show last manufacturers"
+#~ msgstr "Neueste Hersteller anzeigen"
+
+#~ msgid "Significant informations for your business"
+#~ msgstr "Signifikante Informationen für Ihr Unternehmen"
+
+#~ msgid "Report"
+#~ msgstr "Bericht"
+
+#~ msgid "Traffic"
+#~ msgstr "Traffic"
+
+#~ msgid "Start Date"
+#~ msgstr "Startdatum"
+
+#~ msgid "End Date"
+#~ msgstr "Enddatum"
+
+#~ msgid "Show orders of today"
+#~ msgstr "Heutige Bestellung anzeigen"
+
+#~ msgid "Show orders of the past seven days"
+#~ msgstr "Bestellungen der letzten sieben Tage anzeigen"
+
+#, fuzzy
+#~ msgid "Class name"
+#~ msgstr "Klassenname"
+
+#~ msgid "Class length"
+#~ msgstr "Klasse - Länge"
+
+#~ msgid "Class width"
+#~ msgstr "Klasse Breite"
+
+#~ msgid "Class height"
+#~ msgstr "Klasse Höhe"
+
+#~ msgid "Delete class"
+#~ msgstr "Klasse löschen"
+
+#~ msgid "Search and manage your orders"
+#~ msgstr "Bestellungen suchen und verwalten"
+
+#~ msgid "Search for orders"
+#~ msgstr "Bestellungen suchen"
+
+#~ msgid "Invoice firstname"
+#~ msgstr "Vorname Rechnung"
+
+#~ msgid "Invoice lastname"
+#~ msgstr "Name Rechnung"
+
+#~ msgid "Order details"
+#~ msgstr "Bestelldetails"
+
+#~ msgid "Current shopobject categories"
+#~ msgstr "Shopobjektkategorien"
+
+#~ msgid "Click one category for deleting"
+#~ msgstr "Klicken Sie auf eine Kategorie um diese zu entfernen"
+
+#~ msgid "Request elements"
+#~ msgstr "Bestellte Objekte"
+
+#~ msgid "Request details"
+#~ msgstr "Details zum Auftrag"
+
+#~ msgid "Type / State"
+#~ msgstr "Typ / Status"
+
+#~ msgid "Modifier"
+#~ msgstr "Verändert durch"
+
+#~ msgid "Show request"
+#~ msgstr "Auftrag anzeigen"
+
+#~ msgid "Submit"
+#~ msgstr "Senden"
+
+#~ msgid "Search, manage and edit your products"
+#~ msgstr "Suchen, Pflegen und Verwalten Ihrer Produkte"
+
+#~ msgid "Search for products"
+#~ msgstr "Produkte suchen"
+
+#~ msgid "Textsearch"
+#~ msgstr "Textsuche"
+
+#~ msgid "Active"
+#~ msgstr "Aktiv"
+
+#~ msgid "Not active"
+#~ msgstr "Nicht aktiv"
+
+#~ msgid "Shopcategory"
+#~ msgstr "Shopkategorie"
+
+#~ msgid "Product details"
+#~ msgstr "Produktdetails"
+
+#~ msgid "Settings for payment, delivery, shipping and more"
+#~ msgstr "Einstellungen für Bezahlung, Versand, Lieferung und mehr"
+
+#~ msgid "Forms"
+#~ msgstr "Formulare"
+
+#~ msgid "Numbers"
+#~ msgstr "Nummern"
+
+#, fuzzy
+#~ msgid "Companyname"
+#~ msgstr "Firma"
+
+#, fuzzy
+#~ msgid "ZIP"
+#~ msgstr "PLZ"
+
+#~ msgid "Currency"
+#~ msgstr "Währung"
+
+#~ msgid "Tax settings"
+#~ msgstr "Steuereinstellungen"
+
+#~ msgid "Taxclasses"
+#~ msgstr "Steuerklassen"
+
+#~ msgid "The first class is the default class"
+#~ msgstr "Die erste Klasse ist die Standardklasse"
+
+#~ msgid "Delivery settings"
+#~ msgstr "Liefereinstellungen"
+
+#~ msgid "Deliveryclass Country"
+#~ msgstr "Land der Lieferklasse"
+
+#~ msgid "Deliveryclass name"
+#~ msgstr "Name"
+
+#~ msgid "Cart sum min"
+#~ msgstr "Summe min"
+
+#~ msgid "Cart sum max"
+#~ msgstr "Summe max"
+
+#~ msgid "Cart kg min"
+#~ msgstr "kg min"
+
+#~ msgid "Cart kg max"
+#~ msgstr "kg max"
+
+#~ msgid "Deliveryclasses"
+#~ msgstr "Lieferklassen"
+
+#~ msgid "Edit parcel classes"
+#~ msgstr "Paketklassen bearbeiten"
+
+#~ msgid "Parcel classes"
+#~ msgstr "Paketklassen"
+
+#~ msgid "Invoice form"
+#~ msgstr "Rechnungsformular"
+
+#~ msgid "Request form"
+#~ msgstr "Bestellformular"
+
+#~ msgid "Order number structure"
+#~ msgstr "Bestellnummerstruktur"
+
+#~ msgid "Number start"
+#~ msgstr "Startnummer"
+
+#~ msgid "API Username"
+#~ msgstr "API Benutzername"
+
+#~ msgid "API Password"
+#~ msgstr "API Passwort"
+
+#~ msgid "API Signature"
+#~ msgstr "API Signatur"
+
+#~ msgid "API Endpoint"
+#~ msgstr "API Endpunkt"
+
+#~ msgid "Use Proxy"
+#~ msgstr "Proxy Benutzen"
+
+#~ msgid "API Cancel Url"
+#~ msgstr "API Abbruch URL"
+
+#~ msgid "API Success Url"
+#~ msgstr "API Erfolgs URL"
+
+#~ msgid "API Key"
+#~ msgstr "API Schlüssel"
+
+#~ msgid "Cancel Url"
+#~ msgstr "Abbruch URL"
+
+#~ msgid "Success Url"
+#~ msgstr "Erfolgs URL"
+
+#~ msgid "Project ID"
+#~ msgstr "Projekt ID"
+
+#~ msgid "Customer ID"
+#~ msgstr "Kunden ID"
+
+#~ msgid "Save fields"
+#~ msgstr "Felder speichern"
+
+#~ msgid "Shop active"
+#~ msgstr "Shopaktiv"
+
+#~ msgid "Modified by"
+#~ msgstr "Geändert durch"
+
+#~ msgid "Attributes"
+#~ msgstr "Attribute"
+
+#~ msgid "Addresses"
+#~ msgstr "Adressen"
+
+#~ msgid "Registration date"
+#~ msgstr "Registrierungsdatum"
+
+#~ msgid "First login"
+#~ msgstr "Zuerst eingeloggt"
+
+#~ msgid "Last login"
+#~ msgstr "Zuletzt eingeloggt"
+
+#~ msgid "Waiting email verification"
+#~ msgstr "Auf E-Mail Verifikation warten"
+
+#~ msgid "Locked"
+#~ msgstr "Gesperrt"
+
+#~ msgid "Company name"
+#~ msgstr "Firma"
+
+#~ msgid "Please choose"
+#~ msgstr "Bitte wählen"
+
+#~ msgid "Postal code"
+#~ msgstr "PLZ"
+
+#~ msgid "Send message"
+#~ msgstr "Nachricht schicken"
+
+#~ msgid "Send new passwd"
+#~ msgstr "Neues Passwort senden"
+
+#~ msgid "Groups"
+#~ msgstr "Gruppen"
+
+#, fuzzy
+#~ msgid "Administrator"
+#~ msgstr "Benutzer ist Administrator"
+
+#~ msgid "Management"
+#~ msgstr "Management"
+
+#~ msgid "Adresses"
+#~ msgstr "Adressen"
+
+#~ msgid "Add new address"
+#~ msgstr "Neue Adresse hinzufügen"
+
+#, fuzzy
+#~ msgid "Create new class"
+#~ msgstr "Neue Klasse erstellen"
+
+#~ msgid "Save classes"
+#~ msgstr "Klassen speichern"
+
+#~ msgid "Create entity"
+#~ msgstr "Objekt erzeugen"
+
+#~ msgid "Deliverclass name"
+#~ msgstr "Lieferklasse"
+
+#~ msgid "Sum min"
+#~ msgstr "Summe min"
+
+#~ msgid "Sum max"
+#~ msgstr "Summe max"
+
+#~ msgid "Apply changes to"
+#~ msgstr "Änderungen weitergeben an"
+
+#~ msgid "None"
+#~ msgstr "Keine weitergabe"
+
+#~ msgid "Direct children"
+#~ msgstr "Direkte Erben"
+
+#~ msgid "Transitive"
+#~ msgstr "Transitiv"
+
+#~ msgid "Editor will be shown in shopobject instances"
+#~ msgstr "Der Editor erscheint in den Produktinstanzen"
+
+#~ msgid "Dashboard"
+#~ msgstr "Cockpit"
+
+#~ msgid "Start your success from here"
+#~ msgstr "Hier beginnt Ihr Erfolg"
+
+#~ msgid "New Orders for today"
+#~ msgstr "Heutige Bestellungen"
+
+#~ msgid "More info"
+#~ msgstr "Weitere Informationen"
+
+#~ msgid "User Registrations"
+#~ msgstr "Benutzerregistrierungen"
+
+#~ msgid "Cart conversion"
+#~ msgstr "Warenkorb - Conversion"
+
+#~ msgid "Used traffic"
+#~ msgstr "Verbrauch"
+
+#~ msgid "Server is"
+#~ msgstr "Ihr Serverstatus"
+
+#~ msgid "Hello"
+#~ msgstr "Hallo"
+
+#~ msgid "thank you for using sleekshop"
+#~ msgstr "danke für die Benutzung von sleekshop"
+
+#~ msgid "Your testing phase expires on"
+#~ msgstr "Ihre Testphase endet am"
+
+#~ msgid "Your data is incomplete"
+#~ msgstr "Ihre Daten sind nicht vollständig"
+
+#~ msgid "Please check your main data"
+#~ msgstr "Bitte überprüfen Sie Ihre Daten"
+
+#~ msgid "Go to settings"
+#~ msgstr "Zu den Einstellungen"
+
+#~ msgid "Please check your account informations"
+#~ msgstr "Bitte überprüfen Sie Ihre Kontodaten"
+
+#~ msgid "Go to billing settings"
+#~ msgstr "Zu der Abrechnungsseite"
+
+#~ msgid "If you not complete your data the server can be stopped"
+#~ msgstr "Ohne vollständige Daten kann der Server gesperrt werden"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Notifications"
+#~ msgstr "Meldungen"
+
+#~ msgid "No notifications found"
+#~ msgstr "Keine Meldungen gefunden"
+
+#~ msgid "Metadata"
+#~ msgstr "Metadaten"
+
+#~ msgid "Warehouse"
+#~ msgstr "Warenwirtschaft"
+
+#~ msgid "Add variation"
+#~ msgstr "Variation hinzufügen"
+
+#~ msgid "Variations"
+#~ msgstr "Variationen"
+
+#~ msgid "Product variations"
+#~ msgstr "Produktvariationen"
+
+#~ msgid "Calculated"
+#~ msgstr "Berechnet"
+
+#~ msgid "Quantity warning"
+#~ msgstr "Warnungsgrenze"
+
+#~ msgid "Allow overriding"
+#~ msgstr "Überziehen erlauben"
+
+#~ msgid "add to category"
+#~ msgstr "zur Kategorie hinzufügen"
+
+#~ msgid "Data correct"
+#~ msgstr "Daten korrekt"
+
+#~ msgid "Category saved"
+#~ msgstr "Kategorie gespeichert"
+
+#~ msgid "Address saved"
+#~ msgstr "Adresse gespeichert"
+
+#~ msgid "Your new password"
+#~ msgstr "Ihr neues Passwort"
+
+#~ msgid "User is not a manager"
+#~ msgstr "Benutzer ist kein Manager"
+
+#~ msgid "Distributor updated"
+#~ msgstr "Distributor gespeichert"
+
+#~ msgid "Request form saved"
+#~ msgstr "Auftragsformular gespeichert"
+
+#~ msgid "Payment settings saved"
+#~ msgstr "Zahlungseinstellungen gespeichert"
+
+#~ msgid "Order parcel saved"
+#~ msgstr "Paket gespeichert"
+
+#~ msgid "Shipment request successfull"
+#~ msgstr "Versandanfrage erfolgreich"
+
+#~ msgid "Manufacturer saved"
+#~ msgstr "Hersteller gespeichert"
+
+#~ msgid "Address deleted"
+#~ msgstr "Adresse gelöscht"
+
+#~ msgid "Saved"
+#~ msgstr "Gespeichert"
+
+#~ msgid "User saved"
+#~ msgstr "Benutzer gespeichert"
+
+#~ msgid "Taxclass saved"
+#~ msgstr "Steuerklasse gespeichert"
+
+#~ msgid "Taxclass deleted"
+#~ msgstr "Steuerklasse gelöscht"
+
+#~ msgid "Product saved"
+#~ msgstr "Produkt gespeichert"
+
+#~ msgid "Class saved"
+#~ msgstr "Klasse gespeichert"
+
+#~ msgid "User is administrator"
+#~ msgstr "Benutzer ist Administrator"
+
+#~ msgid "Shipping ticket saved"
+#~ msgstr "Versandschein gespeichert"
+
+#~ msgid "Deliveryclass saved"
+#~ msgstr "Lieferklasse gespeichert"
+
+#~ msgid "Warehouse entity saved"
+#~ msgstr "Lagerobjekt gespeichert"
+
+#~ msgid "Shipment settings saved"
+#~ msgstr "Versandeinstellungen gespeichert"
+
+#~ msgid "Content saved"
+#~ msgstr "Inhalt gespeichert"
+
+#~ msgid "Label saved"
+#~ msgstr "Beschriftung gespeichert"
+
+#~ msgid "User is manager"
+#~ msgstr "Benutzer ist Manager"
+
+#~ msgid "You find your invoices in the billing section:"
+#~ msgstr "Sie finden Ihre Rechnungen im Bereich Abrechnungen:"
+
+#~ msgid "Go to billing section"
+#~ msgstr "Zum Abrechnungsbereich"
+
+#~ msgid "An error occured, please check your data"
+#~ msgstr "Es ist ein Fehler aufgetreten, bitte überprüfen Sie Ihre Daten"
+
+#~ msgid "Element added"
+#~ msgstr "Element eingefügt"
+
+#~ msgid "Parcel classes saved"
+#~ msgstr "Paketklassen gespeichert"
+
+#, fuzzy
+#~ msgid "An error occured. We could not debit from the given account"
+#~ msgstr ""
+#~ "Es ist ein Fehler aufgetreten. Wir konnten den Betrag nicht abbuchen."
+
+#~ msgid "User is not a administrator"
+#~ msgstr "Benutzer ist kein Administrator"
+
+#~ msgid "Entry deleted"
+#~ msgstr "Eintrag gelöscht"
+
+#~ msgid "Attribute saved"
+#~ msgstr "Attributname gespeichert"
+
+#~ msgid "Distributor saved"
+#~ msgstr "Distributor gespeichert"
+
+#~ msgid "Sent new password"
+#~ msgstr "Neues Passwort verschickt"
+
+#~ msgid "New Debit"
+#~ msgstr "Neue Abbuchung"
+
+#~ msgid "Invoice form saved"
+#~ msgstr "Rechnungsformular gespeichert"
+
+#~ msgid "Thank you"
+#~ msgstr "Vielen Dank"
+
+#~ msgid "we will charge the given amount in the next days"
+#~ msgstr "wir werden den fälligen Betrag in den nächsten Tagen abbuchen"
+
+#~ msgid "Main data saved"
+#~ msgstr "Hauptdaten gespeichert"
+
+#~ msgid "Show order"
+#~ msgstr "Bestellung anzeigen"
+
+#~ msgid "New"
+#~ msgstr "Neu"
+
+#~ msgid "Shipment action was not successfull"
+#~ msgstr "Versandaktion war nicht erfolgreich"
+
+#~ msgid "Order updated"
+#~ msgstr "Bestellung gespeichert"
+
+#~ msgid "Please contact our service. The server has been stopped."
+#~ msgstr "Bitte kontaktieren Sie unseren Service. Der Server wurde gestoppt."
+
+#~ msgid "Message sent"
+#~ msgstr "Nachricht verschickt"
+
+#~ msgid "Order numbers saved"
+#~ msgstr "Bestellnummern gespeichert"
+
+#~ msgid "Distributor added"
+#~ msgstr "Distributor hinzugefügt"
+
+#~ msgid "Please Login"
+#~ msgstr "Bitte anmelden"
+
+#~ msgid "Save manufacturer"
+#~ msgstr "Hersteller speichern"
+
+#~ msgid "Save entity"
+#~ msgstr "Objekt speichern"
+
+#~ msgid "Distributors"
+#~ msgstr "Distributoren"
+
+#~ msgid "Add distributor"
+#~ msgstr "Distributor hinzufügen"
+
+#~ msgid "Your logout was successfull"
+#~ msgstr "Sie haben Sich erfolgreich abgemeldet"
+
+#~ msgid "Create user"
+#~ msgstr "Benutzer anlegen"
+
+#~ msgid "We want to help you!"
+#~ msgstr "Wir möchten Ihnen helfen!"
+
+#~ msgid "Create distributor"
+#~ msgstr "Distributor erzeugen"
+
+#~ msgid "Save attribute"
+#~ msgstr "Attribute speichern"
+
+#~ msgid "Current addresses"
+#~ msgstr "Aktuelle Adressen"
+
+#~ msgid "Content"
+#~ msgstr "Inhalt"
+
+#~ msgid "Manage your content"
+#~ msgstr "Verwalten Sie Ihre Inhalte"
+
+#~ msgid "Search for content"
+#~ msgstr "Inhalte suchen"
+
+#~ msgid "Content details"
+#~ msgstr "Inhalt details"
+
+#~ msgid "Search and management of users"
+#~ msgstr "Suche und Verwaltungen der Benutzer"
+
+#~ msgid "Search for users"
+#~ msgstr "Benutzer suchen"
+
+#~ msgid "User details"
+#~ msgstr "Benutzerdetails"
+
+#~ msgid "Management for your categories"
+#~ msgstr "Verwaltung Ihrer Kategorien"
+
+#~ msgid "Shop categories"
+#~ msgstr "Shopkategorien"
+
+#~ msgid "Edit SEO"
+#~ msgstr "SEO bearbeiten"
+
+#~ msgid "Found"
+#~ msgstr "Gefunden"
+
+#~ msgid "products"
+#~ msgstr "produkte"
+
+#~ msgid "Orders report daily"
+#~ msgstr "Bestellbericht täglich"
+
+#~ msgid "Delete distributor"
+#~ msgstr "Distributor löschen"
+
+#~ msgid "Your result for the searchstring"
+#~ msgstr "Ihr Ergebnis für den Suchbegriff"
+
+#~ msgid "Search for entities"
+#~ msgstr "Nach Objekten suchen"
+
+#~ msgid "Create a new entity"
+#~ msgstr "Neues Objekt anlegen"
+
+#~ msgid "Show last entities"
+#~ msgstr "Neueste Objekte anzeigen"
+
+#~ msgid "Warehouse entity"
+#~ msgstr "Lagerobjekt"
+
+#~ msgid "Search for desired products and add them by clicking"
+#~ msgstr "Produkte suchen und durch Klicken hinzufügen"
+
+#~ msgid "Chosen products"
+#~ msgstr "Gewählte Produkte"
+
+#~ msgid "PRODUCT"
+#~ msgstr "PRODUCT"
+
+#~ msgid "CONTENT"
+#~ msgstr "INHALT"
+
+#~ msgid "Classname"
+#~ msgstr "Klassenname"
+
+#~ msgid "Expands"
+#~ msgstr "Erbt von"
+
+#~ msgid "Not expanding"
+#~ msgstr "Erbt nicht"
+
+#~ msgid "Create class"
+#~ msgstr "Klasse erstellen"
+
+#~ msgid "submit"
+#~ msgstr "senden"
+
+#~ msgid "delete"
+#~ msgstr "löschen"
+
+#~ msgid "Chose Productclass"
+#~ msgstr "Produktklasse wählen"
+
+#~ msgid "Create product"
+#~ msgstr "Produkt erstellen"
+
+#~ msgid "Entity requests"
+#~ msgstr "Aufträge"
+
+#~ msgid "Search and management of requests"
+#~ msgstr "Suche und Verwaltungen der Aufträge"
+
+#~ msgid "Search for requests"
+#~ msgstr "Aufträge suchen"
+
+#~ msgid "Entity request details"
+#~ msgstr "Details zum Auftrag"
+
+#~ msgid "Warehouses"
+#~ msgstr "Lager"
+
+#~ msgid "Search and management of warehouses"
+#~ msgstr "Suche und Verwaltungen der Lager"
+
+#~ msgid "Search for warehouses"
+#~ msgstr "Lager suchen"
+
+#~ msgid "Warehouse details"
+#~ msgstr "Lagerdetails"
+
+#~ msgid "Returned"
+#~ msgstr "Rücksendung"
+
+#~ msgid "Create warehouse"
+#~ msgstr "Lager anlegen"
+
+#~ msgid "Show refund"
+#~ msgstr "Rückerstattung anzeigen"
+
+#~ msgid "Return handling"
+#~ msgstr "Rücksendungsverwaltung"
+
+#~ msgid "Submit return"
+#~ msgstr "Rücksendung bestätigen"
+
+#~ msgid "Pick list"
+#~ msgstr "Sammelliste"
+
+#~ msgid "Search and management of distributors"
+#~ msgstr "Suche und Verwaltungen der Distributoren"
+
+#~ msgid "Distributor details"
+#~ msgstr "Details zum Distributor"
+
+#~ msgid "Checkins"
+#~ msgstr "Checkins"
+
+#~ msgid "Close request"
+#~ msgstr "Auftrag abschliessen"
+
+#~ msgid "Incomplete request"
+#~ msgstr "Auftrag unvollständig"
+
+#~ msgid "Element number"
+#~ msgstr "Elementnummer"
+
+#~ msgid "Entity Quantity"
+#~ msgstr "Objektanzahl"
+
+#~ msgid "Inventory"
+#~ msgstr "Bestand"
+
+#~ msgid "Blocked"
+#~ msgstr "Blockiert"
+
+#~ msgid "in stock"
+#~ msgstr "auf Lager"
+
+#~ msgid "Manufacturers"
+#~ msgstr "Hersteller"
+
+#~ msgid "Warehouse entities"
+#~ msgstr "Lagerobjekte"
+
+#~ msgid "Movements"
+#~ msgstr "Bewegungen"
+
+#~ msgid "Search and management of manufacturers"
+#~ msgstr "Suche und Verwaltungen der Hersteller"
+
+#~ msgid "Manufacturer details"
+#~ msgstr "Herstellerdetails"
+
+#~ msgid "Requested elements"
+#~ msgstr "Bestellte Elemente"
+
+#~ msgid "Tax rate"
+#~ msgstr "Steuersatz"
+
+#~ msgid "Make the request fit and close it"
+#~ msgstr "Auftrag anpassen und abschließen"
+
+#~ msgid "Submit request"
+#~ msgstr "Auftrag bestätigen"
+
+#~ msgid "Class"
+#~ msgstr "Klasse"
+
+#~ msgid "Picklist"
+#~ msgstr "Sammelliste"
+
+#~ msgid "Refund form"
+#~ msgstr "Rückerstattungsformular"
+
+#~ msgid "Barcode form"
+#~ msgstr "Barcode Formular"
+
+#~ msgid "EAN or Element number"
+#~ msgstr "EAN oder Elementnummer"
+
+#~ msgid "Search and management of checkins"
+#~ msgstr "Suche und Verwaltungen der Checkins"
+
+#~ msgid "Search for checkins"
+#~ msgstr "Checkins suchen"
+
+#~ msgid "Checkin details"
+#~ msgstr "Checkin details"
+
+#~ msgid "Recently placed orders"
+#~ msgstr "Neueste Bestellungen"
+
+#~ msgid "Show all orders"
+#~ msgstr "Alle Bestellungen anzeigen"
+
+#~ msgid "Show all warehouse entities"
+#~ msgstr "Alle Lagerobjekte anzeigen"
+
+#~ msgid "Ready to place"
+#~ msgstr "Bereit zum Platzieren"
+
+#~ msgid "Request not finished"
+#~ msgstr "Auftrag nicht abgeschlossen"
+
+#~ msgid "Show all checkins"
+#~ msgstr "Zeige alle Checkins"
+
+#~ msgid "Bindings"
+#~ msgstr "Bindungen"
+
+#~ msgid "Delete storage"
+#~ msgstr "Lagerfach löschen"
+
+#~ msgid "Checkin an return"
+#~ msgstr "Eine Rücksendung einchecken"
+
+#~ msgid "Continue without choosing request"
+#~ msgstr "Ohne Auftrag fortfahren"
+
+#~ msgid "Choose a request"
+#~ msgstr "Auftrag auswählen"
+
+#~ msgid "No bindings"
+#~ msgstr "Keine Bindungen"
+
+#~ msgid "Binding saved"
+#~ msgstr "Bindung gespeichert"
+
+#~ msgid "Barcode saved"
+#~ msgstr "Barcode gespeichert"
+
+#~ msgid "No storage found"
+#~ msgstr "Kein Fach gefunden"
+
+#~ msgid "Storage saved"
+#~ msgstr "Fach gespeichert"
+
+#~ msgid "Measurement"
+#~ msgstr "Das Maß"
+
+#~ msgid "No element found"
+#~ msgstr "Kein Objekt gefunden"
+
+#~ msgid "Checkin saved"
+#~ msgstr "Checkin gespeichert"
+
+#~ msgid "Picklist saved"
+#~ msgstr "Sammelliste gespeichert"
+
+#~ msgid "Storage deleted"
+#~ msgstr "Fach gelöscht"
+
+#~ msgid "Refund form saved"
+#~ msgstr "Rücksendeformular gespeichert"
+
+#~ msgid "Element placed"
+#~ msgstr "Objekt platziert"
+
+#~ msgid "Return saved"
+#~ msgstr "Rücksendung gespeichert"
+
+#~ msgid "Estimated the availabilities. Dont forget to save."
+#~ msgstr "Die Verfügbarkeit geschätzt. Bitte nicht vergessen zu speichern."
+
+#~ msgid "Warehouse saved"
+#~ msgstr "Lager gespeichert"
+
+#~ msgid "Element took"
+#~ msgstr "Objekt entnommen"
+
+#~ msgid "Storage added"
+#~ msgstr "Fach hinzugefügt"
+
+#~ msgid "Inventory overview"
+#~ msgstr "Bestandsübersicht"
+
+#~ msgid "Storage"
+#~ msgstr "Fach"
+
+#~ msgid "Amount"
+#~ msgstr "Menge"
+
+#~ msgid "Action"
+#~ msgstr "Aktion"
+
+#~ msgid "Refund"
+#~ msgstr "Rückerstattung"
+
+#~ msgid "Resend"
+#~ msgstr "Erneut versenden"
+
+#~ msgid "Delete return"
+#~ msgstr "Rücksendung löschen"
+
+#~ msgid "Corresponding cart elements"
+#~ msgstr "Entsprechende Warenkorbelemente"
+
+#~ msgid "Search and management of checkouts"
+#~ msgstr "Suche und Verwaltungen der Checkouts"
+
+#~ msgid "Search for checkouts"
+#~ msgstr "Checkouts suchen"
+
+#~ msgid "Not placed"
+#~ msgstr "Nicht platziert"
+
+#~ msgid "Save warehouse"
+#~ msgstr "Lager speichern"
+
+#~ msgid "Storages"
+#~ msgstr "Fächer"
+
+#~ msgid "Ratio"
+#~ msgstr "Verhältnis"
+
+#~ msgid "Your calculated price"
+#~ msgstr "Ihr berechneter Preis"
+
+#~ msgid "Search and management of warehouse entities"
+#~ msgstr "Suche und Verwaltungen der Lagerobjekte"
+
+#~ msgid "Search for warehouse entities"
+#~ msgstr "Lagerobjekte suchen"
+
+#~ msgid "Sufficiently stocked"
+#~ msgstr "Ausreichend auf Lager"
+
+#~ msgid "Running out of stock"
+#~ msgstr "Nur wenige auf Lager"
+
+#~ msgid "Empty stock"
+#~ msgstr "Keine auf Lager"
+
+#~ msgid "Empty without warning"
+#~ msgstr "Keine auf Lager aber ohne Warnung"
+
+#~ msgid "Entity details"
+#~ msgstr "Objektdetails"
+
+#~ msgid "WAREHOUSE_ENTITY"
+#~ msgstr "Lagerobjekt"
+
+#~ msgid "Delete binding"
+#~ msgstr "Bindung löschen"
+
+#~ msgid "Warehouse movements"
+#~ msgstr "Lagerbewegungen"
+
+#~ msgid "Place or take warehouse entities, move them"
+#~ msgstr "Platzieren Sie oder entnehmen Sie Lagerobjekte, einfach bewegen"
+
+#~ msgid "Choose storage"
+#~ msgstr "Fach wählen"
+
+#~ msgid "Storage ID"
+#~ msgstr "Fach ID"
+
+#~ msgid "Choose product"
+#~ msgstr "Produkt wählen"
+
+#~ msgid "Choose"
+#~ msgstr "Wählen"
+
+#~ msgid "Checkin and place"
+#~ msgstr "Einchecken und platzieren"
+
+#~ msgid "Take and checkout"
+#~ msgstr "Entnehmen und auschecken"
+
+#~ msgid "PAYMENT_NOT_RECEIVED"
+#~ msgstr "Zahlung nicht erhalten"
+
+#~ msgid "PAYMENT_RECEIVED"
+#~ msgstr "Zahlung erhalten"
+
+#~ msgid "Pickup"
+#~ msgstr "Abholung"
+
+#~ msgid "PROCESSING"
+#~ msgstr "In Bearbeitung"
+
+#~ msgid "CLOSED"
+#~ msgstr "Abgeschlossen"
+
+#~ msgid "MEMBER_ORDER"
+#~ msgstr "Benutzerbestellung"
+
+#~ msgid "CANCELED"
+#~ msgstr "Abgebrochen"
+
+#~ msgid "OPEN"
+#~ msgstr "Offen"
+
+#~ msgid "GUEST_ORDER"
+#~ msgstr "Gastbestellung"
+
+#~ msgid "Create a new product"
+#~ msgstr "Neues Produkt erstellen"
+
+#~ msgid "Deliveryclass deleted"
+#~ msgstr "Lieferklasse gelöscht"
+
+#~ msgid "Page"
+#~ msgstr "Seite"
+
+#~ msgid "Open"
+#~ msgstr "Öffnen"
+
+#~ msgid "Create a new user"
+#~ msgstr "Neuen Benutzer anlegen"
+
+#~ msgid "Show last registered users"
+#~ msgstr "Neueste Benutzer anzeigen"
+
+#~ msgid "LOGIN_PASSWORD_OR_USERNAME_NOT_CORRECT"
+#~ msgstr "Benutzername und Passwort passen nicht zueinander"
+
+#~ msgid "USERNAME_IS_INVALID"
+#~ msgstr "Benutzername ist ungültig"
+
+#~ msgid "EMAIL_IS_INVALID"
+#~ msgstr "E-Mail ist ungültig"
+
+#~ msgid "EMAIL_IS_IN_USE"
+#~ msgstr "E-Mail wird bereits genutzt"
+
+#~ msgid "SHOPOBJECT_NAME_NOT_VALID"
+#~ msgstr "Name für das Shopobjekt ist nicht zulässig"
+
+#~ msgid "SHOPOBJECT_NAME_ALREADY_IN_USE"
+#~ msgstr "Der Name wird bereits benutzt"
+
+#~ msgid "SENT"
+#~ msgstr "Verschickt"
+
+#, fuzzy
+#~ msgid "SHOPOBJECT_ATTRIBUTE_NAME_IS_IN_USE"
+#~ msgstr "Der Name wird bereits benutzt"
+
+#, fuzzy
+#~ msgid "Create new Attribute"
+#~ msgstr "Neues Attribut erzeugen"

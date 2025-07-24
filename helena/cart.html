@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Helena | Cart	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="assets/images/fav.svg">
+	<link rel="stylesheet" href="assets/css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+</head>
+<body>
+<header id="header" class="transparent-header border-bottom">
+	<nav class="navbar navbar-expand-lg">
+	    <div class="container-fluid">
+	    	<a class="navbar-brand" href="index.html">
+	           <img src="assets/images/header-logo.svg"></a>
+	        <div class="navbar-collapse collapse dual-collapse2">
+	            <ul class="navbar-nav me-auto">
+	               <li class="nav-item active">
+	                    <a class="nav-link" href="javascript:void(0)">Shop</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="javascript:void(0)">Stories</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="javascript:void(0)">Collection</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="javascript:void(0)">Assistant</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="javascript:void(0)">Faq's</a>
+	                </li>
+					<li class="nav-item">
+	                    <a class="nav-link" href="javascript:void(0)">Contact Us</a>
+	                </li>
+	            </ul>
+	        </div>
+	       <div class="header-right">
+		       	<ul class="header-info-box">
+		        	<li><a href="#"><img src="assets/images/facebook-icon.svg"></a></li>
+		        	<li><a href="#"><img src="assets/images/instagram-icon.svg"></a></li>
+		        	<li><a href="javascript:void(0)"><img src="assets/images/search-icon.svg"></a></li>
+		        	<li><a href="javascript:void(0)"><img src="assets/images/user-icon.svg"></a></li>
+		        	<li><a class="cart-option" id="cart-option" href="javascript:void(0)"><img src="assets/images/cart-icon.svg"><span>2</span></a></li>
+		        </ul>
+		        <button class="navbar-toggler" onclick="myFunction(this)" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+		        	<div class="bar1"></div>
+  					<div class="bar2"></div>
+  					<div class="bar3"></div>
+		        </button>
+	       </div>
+	    </div>
+	</nav>
+</header>
+<!-- <<|---------------------header End Here---------------------|>> -->
+<section class="shipping-cart-wrap summary-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-xl-12 col-12">
+				<div class="top-heading-wrapper border-top border-bottom">
+				<h1 class="font-40 text-dark crimson-regular">Shopping Cart</h1>
+			</div>
+		</div>
+		<div class="row pe-0">
+			<div class="col-md-12 col-lg-7 col-xl-7 col-12">
+				<div class="products-wrapper mt-0">
+					<h2 class="font-24 text-dark d-inline hind-semibold">Products</h2>
+					<table class="product-table w-100 border-top mt-1">
+						<tbody>
+							<tr>
+								<td>
+									<figure class="product-img me-3">
+										<img src="assets/images/woman-small-image-1.jpg">
+									</figure>
+								</td>
+								<td>
+									<p class="product-name mb-0 font-24 text-dark crimson-regular">Anna Coat</p>
+									<p class="product-name mb-0 font-14 text-dark text-capitalize hind-regular">Lorem Ipsum is simply dummy text of the printing</p>
+									<p class="product-size mb-0 text-dark hind-regular">Size: <span class="size">M</span></p>
+								</td>
+								<td>
+									<div class="price-mini-box">
+										<p class="hind-bold font-18">$150.00</p>
+										<a href="javascript:void(0)" class="remove-btn text-decoration-underline" role="button">Remove</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<figure class="product-img me-3">
+										<img src="assets/images/woman-small-image-1.jpg">
+									</figure>
+								</td>
+								<td>
+									<p class="product-name mb-0 font-24 text-dark crimson-regular">Anna Coat</p>
+									<p class="product-name mb-0 font-14 text-dark text-capitalize hind-regular">Lorem Ipsum is simply dummy text of the printing</p>
+									<p class="product-size mb-0 text-dark hind-regular">Size: <span class="size">M</span></p>
+								</td>
+								<td>
+									<div class="price-mini-box">
+										<p class="hind-bold font-18">$150.00</p>
+										<a href="javascript:void(0)" class="remove-btn text-decoration-underline" role="button">Remove</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-5 col-xl-5 col-12 pe-0">
+				<div class="summary-order mt-5 mt-lg-0 hind-regular">
+					<h2 class="font-30 text-dark d-inline lh-base crimson-regular">Order Summary</h2>
+					<table class="checkout-subtotal w-100 mt-4">
+                 <thead>
+                    <tr>
+                       <th class="product-name hind-regular">Pieces (<span id="count">1</span>)</th>
+                       <th class="product-total hind-regular">$1,880.00</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr class="cart-subtotal">
+                       <td>Shipping <img src="assets/images/question-circle-fill-icon.svg" width="16" height="16" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></td>
+                       <td><span class="calculated-text font-12">Calculated At Checkout</span></td>
+                    </tr>
+                 </tbody>
+                 <tfoot class="border-top">
+                    <tr class="order-total font-18">
+                       <td>Total</td>
+                       <td class="check-total-price"><span class="font-12">USD</span> <strong>$1,880.00</strong></td>
+                    </tr>
+                 </tfoot>
+              </table>
+              <a class="btn btn-dark check-order-bt w-100 font-16" href="/olympia-wednesday/checkout.html">Checkout</a>
+              <h6 class="free-shipping-text mt-4 pt-2 text-center">Free Shipping On Orders Over 650 USD </h6>
+              <h6 class="free-shipping-text text-center mt-3 mb-3">Read More About Our Full <a href="#" class=" text-decoration-underline">Return and Refunds Policy</a></h6>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+<!-- ................................sidebar box................................ -->
+<div class="cart-sidebar shipping-cart-wrap summary-wrap" id="cart-sidebar">
+	<div class="products-wrapper mt-0">
+		<div class="sidebar-header d-flex justify-content-between align-items-center border-top border-bottom py-4 mb-3">
+			<h3 class="font-40 text-dark d-inline crimson-regular mb-0">My Cart</h3>
+			<div class="cart-close ms-auto me-0" id="cart-close"><img src="assets/images/close_icon.svg" width="18" height="18"></div>
+		</div>
+		<h4 class="sub-heading font-24 hind-regular mb-0">Order Summary</h4>
+		<table class="product-table w-100 mt-1">
+			<tbody>
+				<tr>
+					<td>
+						<figure class="product-img me-3">
+							<img src="assets/images/woman-small-image-1.jpg">
+						</figure>
+					</td>
+					<td>
+						<p class="product-name mb-0 font-24 text-dark crimson-regular">Anna Coat</p>
+						<p class="product-name mb-0 font-14 text-dark text-capitalize hind-regular">Lorem Ipsum is simply dummy text of the printing</p>
+						<p class="product-size mb-0 text-dark hind-regular">Size: <span class="size">M</span></p>
+					</td>
+					<td>
+						<div class="price-mini-box">
+							<p class="hind-bold font-18">$150.00</p>
+							<a href="javascript:void(0)" class="remove-btn text-decoration-underline" role="button">Remove</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<figure class="product-img me-3">
+							<img src="assets/images/woman-small-image-1.jpg">
+						</figure>
+					</td>
+					<td>
+						<p class="product-name mb-0 font-24 text-dark crimson-regular">Anna Coat</p>
+						<p class="product-name mb-0 font-14 text-dark text-capitalize hind-regular">Lorem Ipsum is simply dummy text of the printing</p>
+						<p class="product-size mb-0 text-dark hind-regular">Size: <span class="size">M</span></p>
+					</td>
+					<td>
+						<div class="price-mini-box">
+							<p class="hind-bold font-18">$150.00</p>
+							<a href="javascript:void(0)" class="remove-btn text-decoration-underline" role="button">Remove</a>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="checkout-subtotal border-bottom w-100 mt-0 mb-4">
+		  <tbody>
+		     <tr class="cart-subtotal">
+		        <td>Shipping <img src="assets/images/question-circle-fill-icon.svg" width="16" height="16" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></td>
+		        <td><span class="calculated-text font-12">Calculated At Checkout</span></td>
+		     </tr>
+		  </tbody>
+		  <tfoot class="border-top">
+		     <tr class="order-total">
+		        <td>Total</td>
+		        <td class="check-total-price"><span>USD</span> <strong>$1,880.00</strong></td>
+		     </tr>
+		  </tfoot>
+		</table>
+		<a class="btn btn-dark check-order-bt w-100 font-16" href="/olympia-wednesday/checkout.html">Checkout</a>
+		<h6 class="free-shipping-text mt-3 pt-2">Free Shipping On Orders Over 650 USD </h6>
+		<h6 class="free-shipping-text mt-3 mb-3">Read More About Our Full <a href="#" class=" text-decoration-underline">Return and Refunds Policy</a></h6>
+	</div>
+</div>
+<!-- <<|---------------------Footer Stat Here---------------------|>> -->
+<footer id="footer">
+	<div class="container footer-top-row varticle-arrow">
+		<div class="row">
+			<div class="col-md-6 col-lg-4 col-xl-4 col-12 footer-left-border order-2 order-lg-1 mt-5 mt-lg-0">
+				<h4 class="footer-title text-uppercase">DISCOVER</h4>
+				<ul class="list-group footer-list">
+				  <li class="list-group-item"><a href="#">ABOUT US</a></li>
+				  <li class="list-group-item"><a href="#">SHIPPING INFO</a></li>
+				  <li class="list-group-item"><a href="#">RETURN / EXCHANGE</a></li>
+				  <li class="list-group-item"><a href="#">CONTACT US</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-xl-4 col-12 footer-middle-border order-1 order-lg-2">
+				<figure class="text-center footer-logo"><img src="assets/images/footer-logo.svg"></figure>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni</p>
+				<ul class="list-group list-group-horizontal footer-social justify-content-center">
+					<li class="list-group-item"><a target="_blank" href="https://www.instagram.com/magdabutrym/">
+						<img src="assets/images/facebook-footer-icon.svg"></a>
+					</li>
+					<li class="list-group-item"><a target="_blank" href="https://www.instagram.com/magdabutrym/">
+						<img src="assets/images/instagram-icon.svg"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-lg-4 col-xl-4 col-12 footer-right-border order-3 order-lg-3 mt-5 mt-lg-0">
+				<h4 class="footer-title text-uppercase text-md-end text-start">HELP & INFORMATION</h4>
+				<ul class="list-group footer-list text-md-end text-start">
+				  <li class="list-group-item">CALL US : <a href="tel:+123456789">+123-456-789</a></li>
+				  <li class="list-group-item"><a href="mailto:info@example.com">INFO@EXAMPLE.COM</a></li>
+				  <li class="list-group-item">MONDAY TILL FRIDAY 10 TO 6 EST</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom-row">
+		<div class="container">
+			<div class="row">
+			<div class="col-12 col-lg-6">
+				<p class="copyright-text mt-0 mb-3 text-center text-lg-start mb-lg-0 lh-lg">Copyright © 2022 Helena. All Rights Reserved.</p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<ul class="list-group list-group-horizontal footer-list justify-content-center justify-content-lg-end">
+				  <li class="list-group-item"><a href="#">Privacy Policy</a></li>
+				  <li class="list-group-item"><a href="#">Terms & Conditions</a></li>
+				</ul>
+			</div>				
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- <<|--------------------------Script Area--------------------------|>> -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/lightbox.js"></script>
+</body>
+</html>

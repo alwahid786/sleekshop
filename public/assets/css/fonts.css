@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700');
+@font-face {
+    font-family: 'hindsemibold';
+    src: url('../fonts/hind-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/hind-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hindregular';
+    src: url('../fonts/hind-regular-webfont.woff2') format('woff2'),
+         url('../fonts/hind-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hindmedium';
+    src: url('../fonts/hind-medium-webfont.woff2') format('woff2'),
+         url('../fonts/hind-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hindlight';
+    src: url('../fonts/hind-light-webfont.woff2') format('woff2'),
+         url('../fonts/hind-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'hindbold';
+    src: url('../fonts/hind-bold-webfont.woff2') format('woff2'),
+         url('../fonts/hind-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilmer_regular';
+    src: url('../fonts/gilmer_regular-webfont.woff2') format('woff2'),
+         url('../fonts/gilmer_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilmer_outlineregular';
+    src: url('../fonts/gilmer_outline-webfont.woff2') format('woff2'),
+         url('../fonts/gilmer_outline-webfont.woff') format('woff'),
+         url('../fonts/Gilmer Outline.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilmer_medium';
+    src: url('../fonts/gilmer_medium-webfont.woff2') format('woff2'),
+         url('../fonts/gilmer_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilmer_light';
+    src: url('../fonts/gilmer_light-webfont.woff2') format('woff2'),
+         url('../fonts/gilmer_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilmer_heavy';
+    src: url('../fonts/gilmer_heavy-webfont.woff2') format('woff2'),
+         url('../fonts/gilmer_heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilmer_bold';
+    src: url('../fonts/gilmer_bold-webfont.woff2') format('woff2'),
+         url('../fonts/gilmer_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'crimson_semibold_italic';
+    src: url('../fonts/crimsontext-semibolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-semibolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'crimson_semibold';
+    src: url('../fonts/crimsontext-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'crimson_regular';
+    src: url('../fonts/crimsontext-regular-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'crimson_italic';
+    src: url('../fonts/crimsontext-italic-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'crimson_bold_italic';
+    src: url('../fonts/crimsontext-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'crimson_bold';
+    src: url('../fonts/crimsontext-bold-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sailecmedium';
+    src: url('../fonts/sailec-medium-webfont.eot');
+    src: url('../fonts/sailec-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sailec-medium-webfont.woff2') format('woff2'),
+         url('../fonts/sailec-medium-webfont.woff') format('woff'),
+         url('../fonts/sailec-medium-webfont.ttf') format('truetype'),
+         url('../fonts/sailec-medium-webfont.svg#sailecmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sailecthin';
+    src: url('../fonts/sailec-thin-webfont.eot');
+    src: url('../fonts/sailec-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sailec-thin-webfont.woff2') format('woff2'),
+         url('../fonts/sailec-thin-webfont.woff') format('woff'),
+         url('../fonts/sailec-thin-webfont.ttf') format('truetype'),
+         url('../fonts/sailec-thin-webfont.svg#sailecthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'saileclight';
+    src: url('../fonts/sailec-light-webfont.eot');
+    src: url('../fonts/sailec-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sailec-light-webfont.woff2') format('woff2'),
+         url('../fonts/sailec-light-webfont.woff') format('woff'),
+         url('../fonts/sailec-light-webfont.ttf') format('truetype'),
+         url('../fonts/sailec-light-webfont.svg#saileclight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sailecbold';
+    src: url('../fonts/sailec-bold-webfont.eot');
+    src: url('../fonts/sailec-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sailec-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sailec-bold-webfont.woff') format('woff'),
+         url('../fonts/sailec-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sailec-bold-webfont.svg#sailecbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sailecregular';
+    src: url('../fonts/sailec-webfont.eot');
+    src: url('../fonts/sailec-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sailec-webfont.woff2') format('woff2'),
+         url('../fonts/sailec-webfont.woff') format('woff'),
+         url('../fonts/sailec-webfont.ttf') format('truetype'),
+         url('../fonts/sailec-webfont.svg#sailecregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bookman_old_styleitalic';
+    src: url('../fonts/bookosi-webfont.woff2') format('woff2'),
+         url('../fonts/bookosi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bookman_old_stylebold_italic';
+    src: url('../fonts/bookosbi-webfont.woff2') format('woff2'),
+         url('../fonts/bookosbi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bookman_old_stylebold';
+    src: url('../fonts/bookosb-webfont.woff2') format('woff2'),
+         url('../fonts/bookosb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bookman_old_stylebold_italic';
+    src: url('../fonts/bookman_old_style_fett_kursiv-webfont.woff2') format('woff2'),
+         url('../fonts/bookman_old_style_fett_kursiv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bookman_old_styleregular';
+    src: url('../fonts/bkmnos-webfont.woff2') format('woff2'),
+         url('../fonts/bkmnos-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'sailecregular', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, .crimson-semibold{
+    font-family: crimson_semibold;
+}
+.gilmer-regular{    
+    font-family: 'gilmer_regular', sans-serif;
+}
+.sailec-bold{
+    font-family: 'sailecbold';
+}
+.crimson-regular{
+    font-family: 'crimson_regular';
+}
+.hind-light{
+    font-family: 'hindlight';
+}
+.hind-regular{
+    font-family: 'hindregular';    
+    font-weight: 400;
+}
+.hind-semibold{
+    font-family: 'hindsemibold';
+    font-weight: 600;
+}
+.hind-bold{
+    font-family: 'hindbold';
+    font-weight: 700;
+}
